@@ -1,0 +1,86 @@
+:root {
+  --dark-bg: #111;
+  --dark-text: #e4e0d7;
+  --dark-accent: #222;
+
+  --light-bg: #fffaee;
+  --light-text: #111;
+  --light-accent: #eee8da;
+
+  /* Default mode */
+  --text-color: var(--dark-text);
+  --bg-color: var(--dark-bg);
+  --accent-color: var(--dark-accent);
+}
+
+#theme-switch:checked ~ #page {
+  --text-color: var(--light-text);
+  --bg-color: var(--light-bg);
+  --accent-color: var(--light-accent);
+}
+
+/* Theme switcher */
+#theme-switch {
+  /* Hides the checkbox */
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.switch-label {
+  cursor: pointer;
+  display: flex;
+}
+
+.switch-label::before {
+  content: var(--switch-icon);
+  font-size: 40px;
+  transition: text-shadow 0.2s;
+}
+
+.switch-label::after {
+  align-self: center;
+  content: var(--switch-text);
+  color: var(--switch-shadow-color);
+  font-size: 28px;
+  line-height: 40px;
+  opacity: 0;
+  padding-left: 15px;
+  transition: opacity 0.2s;
+}
+
+#theme-switch:focus ~ #page .switch-label::before,
+.switch-label:hover::before {
+  text-shadow: 0 0 15px var(--switch-shadow-color);
+}
+
+#theme-switch:focus ~ #page .switch-label::after,
+.switch-label:hover::after {
+  opacity: 1;
+}
+
+#page {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Courier';
+}
+
+#page .post-card {
+  border-color: var(--text-color);
+}
+
+#page .post-card:hover {
+  background-color: var(--accent-color);
+}
+
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+									supported by Chrome, Edge, Opera and Firefox */
+}

@@ -1,0 +1,46 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <BaseHead
+            title={title || SITE_TITLE}
+            description={description || SITE_DESCRIPTION}
+        />
+    </head>
+    <body>
+        <input type="checkbox" class="theme-switch" id="theme-switch" />
+        <div id="page" class="min-h-screen">
+            <Header />
+            <slot />
+        </div>
+
+        <script>
+            // This code is only used to remember theme selection
+            const themeSwitch = document.querySelector(
+                ".theme-switch"
+            ) as HTMLInputElement;
+            if (themeSwitch) {
+                themeSwitch.checked =
+                    localStorage.getItem("switchedTheme") === "true";
+
+                themeSwitch.addEventListener("change", function (e) {
+                    if (e.currentTarget.checked === true) {
+                        // Add item to localstorage
+                        localStorage.setItem("switchedTheme", "true");
+                    } else {
+                        // Remove item if theme is switched back to normal
+                        localStorage.removeItem("switchedTheme");
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>

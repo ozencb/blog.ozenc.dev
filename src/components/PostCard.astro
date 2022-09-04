@@ -1,0 +1,49 @@
+---
+import type { FrontmatterPost } from "../types";
+import Tag from "./Tag.astro";
+
+export type Props = FrontmatterPost;
+
+const { frontmatter } = Astro.props as Props;
+const { title, description, slug, tags, type, url, pubDate, image } =
+    frontmatter;
+
+const isSameOrigin = !url;
+---
+
+<div
+    class="post-card inline-block w-full border border-dashed p-2 break-inside-avoid mb-4"
+>
+    <a
+        href={isSameOrigin ? `/${slug}` : url}
+        target={isSameOrigin ? "_self" : "_blank"}
+    >
+        <div class="flex justify-between font-bold text-xs py-1 items-center">
+            {pubDate && <div>{pubDate.toLocaleLowerCase()}</div>}
+            <div>
+                {type.toLocaleLowerCase()}{
+                    !isSameOrigin && <span> &rarr;</span>
+                }
+            </div>
+            {
+                tags && (
+                    <div class="flex flex-row gap-1">
+                        {tags.map((item) => (
+                            <Tag text={item} />
+                        ))}
+                    </div>
+                )
+            }
+        </div>
+
+        <div class="font-black text-5xl my-6">
+            {title}
+        </div>
+
+        {image && <img src={image} class="object-cover w-full aspect-square" />}
+
+        <div class="font-light text-lg mt-4">
+            {description}
+        </div>
+    </a>
+</div>

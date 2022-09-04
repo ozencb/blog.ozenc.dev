@@ -1,0 +1,25 @@
+---
+import { SITE_DESCRIPTION, SITE_TITLE } from '../config';
+import type { Post } from '../types';
+import SiteLayout from './SiteLayout.astro';
+
+export type Props = Post;
+
+const { title, description, pubDate, timeToRead } = Astro.props as Props;
+---
+
+<SiteLayout
+  title={`${title} | ${SITE_TITLE}`}
+  description={`${description} | ${SITE_DESCRIPTION}`}
+>
+  <article class="mx-4 sm:mr-64 sm:ml-12 mt-16">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl mb-8">
+      {title}
+    </h1>
+    <h3 class="italic text-l sm:text-xl md:text-2xl lg:text-4xl mb-4">
+      {description}
+    </h3>
+    <h5 class="text-md mb-24">{pubDate} &bull; {timeToRead}</h5>
+    <slot />
+  </article>
+</SiteLayout>

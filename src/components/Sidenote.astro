@@ -1,0 +1,68 @@
+---
+const { type, title, number } = Astro.props;
+---
+
+<span>
+  <label for={`sidenote${number}`} class="no-select sidenote-label"
+    ><span class="super">{number}</span>
+  </label>
+  <input type="checkbox" id={`sidenote${number}`} class="sidenote-toggle" />
+  <div class="sidenote-container">
+    <div class="sidenote-title">
+      <span class="super">{number}</span>
+      {title}
+    </div>
+    <div class="sidenote-content"><slot /></div>
+  </div>
+</span>
+
+<style>
+  .sidenote-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 0.5rem;
+  }
+
+  .sidenote-content {
+    font-size: 0.9em;
+    font-weight: 100;
+  }
+
+  .sidenote-label {
+    cursor: pointer;
+  }
+
+  .sidenote-toggle {
+    display: none;
+  }
+
+  .sidenote-container {
+    display: none;
+  }
+
+  .sidenote-toggle:checked + .sidenote-container {
+    display: block;
+  }
+
+  .super {
+    position: relative;
+    font-size: 0.7em;
+    top: -5px;
+  }
+
+  @media (min-width: 640px) {
+    .sidenote-label {
+      cursor: default;
+    }
+
+    .sidenote-container {
+      display: block;
+      width: 12rem;
+      float: right;
+      margin-right: -14rem;
+      border-style: dashed;
+      border-width: 1px;
+      padding: 1rem;
+    }
+  }
+</style>
