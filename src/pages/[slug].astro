@@ -2,18 +2,22 @@
 import BlogLayout from '../layouts/BlogLayout.astro';
 
 export async function getStaticPaths() {
-  const posts = (await Astro.glob('../posts/blog/**/*.{md,mdx}')).filter(
-    (post) => !post.frontmatter.archived
-  );
+  try {
+    const posts = (await Astro.glob('../posts/blog/**/*.{md,mdx}')).filter(
+      (post) => !post.frontmatter.archived
+    );
 
-  return posts.map((post) => ({
-    params: {
-      slug: post.frontmatter.slug
-    },
-    props: {
-      ...post
-    }
-  }));
+    return posts.map((post) => ({
+      params: {
+        slug: post.frontmatter.slug
+      },
+      props: {
+        ...post
+      }
+    }));
+  } catch {
+    return [];
+  }
 }
 
 const { frontmatter, Content } = Astro.props;
