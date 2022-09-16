@@ -1,0 +1,67 @@
+---
+import type { FrontmatterPost } from '../types';
+import PostListItem from './PostListItem.astro';
+
+let posts: FrontmatterPost[];
+
+try {
+  posts = (await Astro.glob('../posts/**/*.{md,mdx}'))
+    .filter((post) => !post.frontmatter.archived)
+    .sort(
+      (a, b) =>
+        new Date(b.frontmatter.pubDate).valueOf() -
+        new Date(a.frontmatter.pubDate).valueOf()
+    ) as FrontmatterPost[];
+} catch {
+  posts = [];
+}
+---
+
+<section class="container no-select">
+  {
+    !!posts.length ? (
+      <>
+        <div class="name">özenç's site</div>
+        <div class="posts">
+          <div class="posts">
+            {posts.map((post) => (
+              <PostListItem {...post} />
+            ))}
+          </div>
+        </div>
+      </>
+    ) : (
+      <div class="posts-empty">
+        <div>here be dragons</div>
+      </div>
+    )
+  }
+</section>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    margin-top: 2rem;
+  }
+
+  .name {
+    font-size: 1.5em;
+    font-weight: 900;
+    padding: 8px;
+  }
+
+  .posts {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .posts-empty {
+    display: flex;
+    margin-top: 12rem;
+    text-align: center;
+    justify-content: center;
+  }
+</style>

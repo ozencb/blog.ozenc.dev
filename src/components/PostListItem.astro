@@ -1,0 +1,78 @@
+---
+import type { FrontmatterPost, PostTypes } from '../types';
+
+import ArticleIcon from '../assets/document_stack.svg';
+import ResourceIcon from '../assets/chain.svg';
+import ProjectIcon from '../assets/floppy.svg';
+
+export type Props = FrontmatterPost;
+
+const { frontmatter } = Astro.props as Props;
+const { title, description, slug, url, pubDate, type } = frontmatter;
+
+const isSameOrigin = !url;
+
+const typeIcons: { [key in keyof typeof PostTypes]?: string } = {
+  ARTICLE: ArticleIcon,
+  RESOURCE: ResourceIcon,
+  PROJECT: ProjectIcon
+};
+---
+
+<a
+  href={isSameOrigin ? `/${slug}` : url}
+  target={isSameOrigin ? '_self' : '_blank'}
+  class="post"
+>
+  <div class="title">
+    <div>{title}</div>
+    <img src={typeIcons[type]} alt="" class="type-icon" />
+  </div>
+
+  {description && <div class="description">{description}</div>}
+
+  <div class="meta">
+    <div class="pub-date">
+      {pubDate && <div>{pubDate.toLocaleLowerCase()}</div>}
+    </div>
+  </div>
+</a>
+
+<style>
+  .post {
+    padding: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .post:hover {
+    background-color: var(--accent-color);
+  }
+
+  .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 700;
+    margin: 0.7rem 0;
+  }
+
+  .type-icon {
+    width: 1.5rem;
+    filter: var(--filter);
+  }
+
+  .description {
+    font-size: 0.7em;
+    margin-bottom: 0.5rem;
+  }
+
+  .meta {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    font-size: 0.7em;
+  }
+
+  .pub-date {
+  }
+</style>

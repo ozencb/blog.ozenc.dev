@@ -1,78 +1,29 @@
 :root {
   --dark-bg: #111;
-  --dark-text: #e4e0d7;
+  --dark-text: #fff;
   --dark-accent: #222;
+  --dark-text-accent: #444;
+  --dark-filter: invert(0);
 
-  --light-bg: #fffaee;
+  --light-bg: #fff;
   --light-text: #111;
-  --light-accent: #eee8da;
+  --light-accent: #eee;
+  --light-text-accent: #ccc;
+  --dark-filter: invert(1);
 
   /* Default mode */
   --text-color: var(--dark-text);
   --bg-color: var(--dark-bg);
   --accent-color: var(--dark-accent);
-}
+  --filter: var(--dark-filter);
 
-#theme-switch:checked ~ #page {
-  --text-color: var(--light-text);
-  --bg-color: var(--light-bg);
-  --accent-color: var(--light-accent);
-}
-
-/* Theme switcher */
-#theme-switch {
-  /* Hides the checkbox */
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-.switch-label {
-  cursor: pointer;
-  display: flex;
-}
-
-.switch-label::before {
-  content: var(--switch-icon);
-  font-size: 40px;
-  transition: text-shadow 0.2s;
-}
-
-.switch-label::after {
-  align-self: center;
-  content: var(--switch-text);
-  color: var(--switch-shadow-color);
-  font-size: 28px;
-  line-height: 40px;
-  opacity: 0;
-  padding-left: 15px;
-  transition: opacity 0.2s;
-}
-
-#theme-switch:focus ~ #page .switch-label::before,
-.switch-label:hover::before {
-  text-shadow: 0 0 15px var(--switch-shadow-color);
-}
-
-#theme-switch:focus ~ #page .switch-label::after,
-.switch-label:hover::after {
-  opacity: 1;
-}
-
-#page {
-  background: var(--bg-color);
-  color: var(--text-color);
-  font-family: 'Courier';
-}
-
-#page .post-card {
-  border-color: var(--text-color);
-}
-
-#page .post-card:hover {
-  background-color: var(--accent-color);
+  --primary: #22d2a0;
+  --secondary: #192824;
+  --green: #1fc11b;
+  --yellow: #ffd913;
+  --orange: #ff9c55;
+  --red: #ff5555;
+  --aqua: #5bc0eb;
 }
 
 .no-select {
@@ -83,4 +34,13 @@
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently
 									supported by Chrome, Edge, Opera and Firefox */
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+a:visited {
+  color: var(--text-color);
 }

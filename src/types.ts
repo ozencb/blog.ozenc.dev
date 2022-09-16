@@ -1,11 +1,14 @@
-export type POST_TYPE = 'ARTICLE' | 'RESOURCE' | 'PROJECT';
-
+export enum PostTypes {
+  ARTICLE,
+  RESOURCE,
+  PROJECT
+}
+export type PostType = keyof typeof PostTypes;
 export type Post = {
-  type: POST_TYPE;
+  type: PostType;
   title: string;
-  description: string;
+  description?: string;
   slug?: string;
-  image?: string;
   pubDate?: string;
   timeToRead?: string;
   archived?: boolean;

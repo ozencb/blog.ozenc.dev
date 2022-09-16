@@ -1,9 +1,19 @@
 ---
-import Header from "../components/Header.astro";
-import Posts from "../components/Posts.astro";
-import SiteLayout from "../layouts/SiteLayout.astro";
+import PostList from '../components/PostList.astro';
+import SiteLayout from '../layouts/SiteLayout.astro';
 ---
 
 <SiteLayout>
-	<Posts />
+  <div class="posts">
+    <PostList />
+  </div>
 </SiteLayout>
+
+<style>
+  .posts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+</style>

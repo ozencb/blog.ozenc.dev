@@ -2,6 +2,15 @@
 const { text } = Astro.props;
 ---
 
-<p class="border font-bold p-0.5 text-center leading-1">
-    {text}
+<p class="tag">
+  {text}
 </p>
+
+<style>
+  .tag {
+    padding: 0.125rem;
+    font-weight: 700;
+    text-align: center;
+    border-width: 1px;
+  }
+</style>

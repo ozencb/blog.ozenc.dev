@@ -1,35 +1,162 @@
-<header>
-  <nav
-    class="no-select flex flex-row justify-between mx-4 pb-6 pt-2 tracking-tight md:tracking-widest"
-  >
-    <div class="min-w-max">
-      <a class="btn-entry" href="/">özenç bilgili</a>
+<header class="header no-select">
+  <a class="logo-container" href="/">
+    <div class="logo">
+      <svg viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg"
+        ><g
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          transform="translate(3 3)"
+          ><path
+            d="m14 1c.8284271.82842712.8284271 2.17157288 0 3l-9.5 9.5-4 1 1-3.9436508 9.5038371-9.55252193c.7829896-.78700064 2.0312313-.82943964 2.864366-.12506788z"
+          ></path><path d="m12.5 3.5 1 1"></path>
+        </g>
+      </svg>
     </div>
-    <div class="flex flex-row gap-1 md:gap-6">
-      <label class="switch-label btn-entry min-w-max" for="theme-switch"
-        >my eyes!!</label
-      >
-      <a
-        class="btn-entry min-w-max"
-        href="https://github.com/ozencb"
-        target="_blank">github</a
-      >
-      <a
-        class="btn-entry min-w-max"
-        href="https://www.linkedin.com/in/ozencb/?locale=en_US"
-        target="_blank">linkedin</a
-      >
-      <a class="btn-entry min-w-max" href="mailto:bilgiliozenc@gmail.com"
-        >e-mail</a
-      >
-      <a class="btn-entry min-w-max" href="/rss.xml">rss</a>
-    </div>
-  </nav>
+  </a>
+
+  <label class="switch-label" for="theme-switch">
+    <svg
+      height="21"
+      viewBox="0 0 21 21"
+      width="21"
+      xmlns="http://www.w3.org/2000/svg"
+      ><g
+        fill="none"
+        fill-rule="evenodd"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        transform="translate(2 5)"
+        ><path
+          d="m8.5 11c3.1296136 0 5.9629469-1.83333333 8.5-5.5-2.5370531-3.66666667-5.3703864-5.5-8.5-5.5-3.12961358 0-5.96294692 1.83333333-8.5 5.5 2.53705308 3.66666667 5.37038642 5.5 8.5 5.5z"
+        ></path><path
+          d="m8.5 2c.18463928 0 .36593924.01429736.54285316.04184538-.02850842.148891-.04285316.30184762-.04285316.45815462 0 1.38071187 1.1192881 2.5 2.5 2.5.156307 0 .3092636-.01434474.4576252-.04178957.0280774.17585033.0423748.35715029.0423748.54178957 0 1.93299662-1.5670034 3.5-3.5 3.5-1.93299662 0-3.5-1.56700338-3.5-3.5s1.56700338-3.5 3.5-3.5z"
+        ></path>
+      </g>
+    </svg>
+  </label>
 </header>
 
 <style>
-  .btn-entry:hover {
-    background-color: var(--text-color);
-    color: var(--bg-color);
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.75rem;
+  }
+
+  .logo-container {
+    width: calc(1.5rem + 8px);
+    height: calc(1.5rem + 8px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .logo {
+    width: 1.5rem;
+    height: 1.5rem;
+    box-sizing: unset;
+    background-color: var(--bg-color);
+    display: block;
+    text-align: center;
+    border: 1px solid var(--primary);
+    box-shadow: -2px -2px 0 -1px var(--bg-color), -2px -2px var(--green),
+      -4px -4px 0 -1px var(--bg-color), -4px -4px var(--yellow),
+      -6px -6px 0 -1px var(--bg-color), -6px -6px var(--orange),
+      -8px -8px 0 -1px var(--bg-color), -8px -8px var(--red);
+  }
+
+  .logo:hover {
+    animation: shadow-wave 1s ease infinite;
+  }
+  .logo svg {
+    fill: var(--primary);
+  }
+
+  .logo svg:hover {
+    animation: rainbow 1s ease infinite;
+  }
+
+  @keyframes rainbow {
+    0% {
+      fill: var(--primary);
+    }
+
+    20% {
+      fill: var(--red);
+    }
+
+    40% {
+      fill: var(--orange);
+    }
+
+    60% {
+      fill: var(--yellow);
+    }
+
+    80% {
+      fill: var(--green);
+    }
+
+    100% {
+      fill: var(--primary);
+    }
+  }
+
+  @keyframes shadow-wave {
+    0% {
+      border: 1px solid var(--primary);
+      box-shadow: -2px -2px 0 -1px var(--bg-color), -2px -2px var(--green),
+        -4px -4px 0 -1px var(--bg-color), -4px -4px var(--yellow),
+        -6px -6px 0 -1px var(--bg-color), -6px -6px var(--orange),
+        -8px -8px 0 -1px var(--bg-color), -8px -8px var(--red);
+    }
+
+    20% {
+      border: 1px solid var(--red);
+      box-shadow: -2px -2px 0 -1px var(--bg-color), -2px -2px var(--primary),
+        -4px -4px 0 -1px var(--bg-color), -4px -4px var(--green),
+        -6px -6px 0 -1px var(--bg-color), -6px -6px var(--yellow),
+        -8px -8px 0 -1px var(--bg-color), -8px -8px var(--orange);
+    }
+
+    40% {
+      border: 1px solid var(--orange);
+      box-shadow: -2px -2px 0 -1px var(--bg-color), -2px -2px var(--red),
+        -4px -4px 0 -1px var(--bg-color), -4px -4px var(--primary),
+        -6px -6px 0 -1px var(--bg-color), -6px -6px var(--green),
+        -8px -8px 0 -1px var(--bg-color), -8px -8px var(--yellow);
+    }
+
+    60% {
+      border: 1px solid var(--yellow);
+      box-shadow: -2px -2px 0 -1px var(--bg-color), -2px -2px var(--orange),
+        -4px -4px 0 -1px var(--bg-color), -4px -4px var(--red),
+        -6px -6px 0 -1px var(--bg-color), -6px -6px var(--primary),
+        -8px -8px 0 -1px var(--bg-color), -8px -8px var(--green);
+    }
+
+    80% {
+      border: 1px solid var(--green);
+      box-shadow: -2px -2px 0 -1px var(--bg-color), -2px -2px var(--yellow),
+        -4px -4px 0 -1px var(--bg-color), -4px -4px var(--orange),
+        -6px -6px 0 -1px var(--bg-color), -6px -6px var(--red),
+        -8px -8px 0 -1px var(--bg-color), -8px -8px var(--primary);
+    }
+
+    100% {
+      border: 1px solid var(--primary);
+      box-shadow: -2px -2px 0 -1px var(--bg-color), -2px -2px var(--green),
+        -4px -4px 0 -1px var(--bg-color), -4px -4px var(--yellow),
+        -6px -6px 0 -1px var(--bg-color), -6px -6px var(--orange),
+        -8px -8px 0 -1px var(--bg-color), -8px -8px var(--red);
+    }
   }
 </style>
