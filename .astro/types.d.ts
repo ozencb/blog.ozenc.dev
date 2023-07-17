@@ -224,16 +224,16 @@ declare module 'astro:content' {
   collection: "article";
   data: InferEntrySchema<"article">
 } & { render(): Render[".md"] };
-"proxmox-mount-points/proxmox-mount-points.md": {
-	id: "proxmox-mount-points/proxmox-mount-points.md";
-  slug: "proxmox-mount-points";
+"markdown-test/markdown-test.md": {
+	id: "markdown-test/markdown-test.md";
+  slug: "markdown-test";
   body: string;
   collection: "article";
   data: InferEntrySchema<"article">
 } & { render(): Render[".md"] };
-"test/test.md": {
-	id: "test/test.md";
-  slug: "markdown-test";
+"proxmox-mount-points/proxmox-mount-points.md": {
+	id: "proxmox-mount-points/proxmox-mount-points.md";
+  slug: "proxmox-mount-points";
   body: string;
   collection: "article";
   data: InferEntrySchema<"article">

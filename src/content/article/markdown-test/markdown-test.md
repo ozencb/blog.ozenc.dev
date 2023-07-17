@@ -2,7 +2,6 @@
 slug: 'markdown-test'
 title: 'Markdown Test'
 pubDate: "2000-01-01"
-timeToRead: '1000 min'
 draft: true
 tags: ['markdown', 'test']
 ---
