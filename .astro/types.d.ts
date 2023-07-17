@@ -238,13 +238,6 @@ declare module 'astro:content' {
   collection: "article";
   data: InferEntrySchema<"article">
 } & { render(): Render[".md"] };
-"trpc/trpc.md": {
-	id: "trpc/trpc.md";
-  slug: "trpc";
-  body: string;
-  collection: "article";
-  data: InferEntrySchema<"article">
-} & { render(): Render[".md"] };
 };
 
 	};
