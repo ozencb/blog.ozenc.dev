@@ -38,13 +38,6 @@ body {
 body {
   background-color: var(--bg-color);
   font-size: 1.2em;
-  font-weight: bolder;
-}
-
-@media (max-width: 768px) {
-  body {
-    font-size: 1em;
-  }
 }
 
 body:has(#theme-switch:checked) {
