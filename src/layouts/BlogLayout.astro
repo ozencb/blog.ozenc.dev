@@ -15,10 +15,10 @@ const { title, description, pubDate, tags, timeToRead } = Astro.props;
     <h1 class="title">
       {title}
     </h1>
-    {description && <h3 class="description">{description}</h3>}
-    <h5 class="meta">
+    {description && <h2 class="description">{description}</h2>}
+    <h3 class="meta">
       {format(pubDate, DATE_FORMAT_SHORT)} &bull; {timeToRead}
-    </h5>
+    </h3>
 
     <hr />
 
@@ -33,7 +33,6 @@ const { title, description, pubDate, tags, timeToRead } = Astro.props;
 
 <style>
   .container {
-    font-size: 1em;
     line-height: 1.4;
     max-width: 45rem;
     margin: 0 auto;
@@ -51,7 +50,7 @@ const { title, description, pubDate, tags, timeToRead } = Astro.props;
   }
 
   .meta {
-    font-size: 1em;
+    font-size: 0.8em;
   }
 
   hr {
@@ -61,7 +60,8 @@ const { title, description, pubDate, tags, timeToRead } = Astro.props;
 
   .tags {
     display: flex;
-    gap: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
 
   @media (max-width: 768px) {
