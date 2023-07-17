@@ -1,0 +1,41 @@
+---
+import { FEATURE_FLAGS } from '../constants';
+import { Link } from 'astro-link';
+---
+
+<footer class="container">
+  {FEATURE_FLAGS.ABOUT_PAGE && <Link href="/about">aboutme</Link>}
+
+  <Link href="https://github.com/ozencb" externalInNewTab={true}>github</Link>
+
+  <Link
+    href="https://www.linkedin.com/in/ozencb/?locale=en_US"
+    externalInNewTab={true}
+  >
+    linkedin
+  </Link>
+
+  <Link href="mailto:bilgiliozenc@gmail.com">e-mail</Link>
+
+  <Link href="/rss.xml">rss</Link>
+
+  <Link href="/tags">tags</Link>
+</footer>
+
+<style>
+  .container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 0.6em;
+  }
+
+  a {
+    color: #666;
+  }
+  a:visited {
+    color: #666;
+  }
+</style>

@@ -1,0 +1,139 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+
+import { SITE_TITLE, SITE_DESCRIPTION } from '../constants';
+
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <BaseHead
+      title={title || SITE_TITLE}
+      description={description || SITE_DESCRIPTION}
+    />
+  </head>
+  <body>
+    <input
+      type="checkbox"
+      class="theme-switch"
+      id="theme-switch"
+      name="theme-switch"
+      aria-labelledby="lbl-theme-switch"
+    />
+    <div id="page">
+      <Header />
+      <main class="main-section">
+        <div class="content">
+          <slot />
+        </div>
+      </main>
+      <Footer />
+    </div>
+
+    <script>
+      // This code is only used to remember theme selection
+      const themeSwitch = document.querySelector(
+        '.theme-switch'
+      ) as HTMLInputElement;
+      if (themeSwitch) {
+        themeSwitch.checked = localStorage.getItem('switchedTheme') === 'true';
+
+        themeSwitch.addEventListener('change', function (e) {
+          if (e.currentTarget && e.currentTarget['checked'] === true) {
+            // Add item to localstorage
+            localStorage.setItem('switchedTheme', 'true');
+          } else {
+            // Remove item if theme is switched back to normal
+            localStorage.removeItem('switchedTheme');
+          }
+        });
+      }
+    </script>
+    <style>
+      #page {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        min-height: 100vh;
+        width: 100%;
+        max-width: 100vw;
+        min-width: 300px;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        font-family: var(--font-family-monospace);
+        font-weight: normal;
+        letter-spacing: 0.65px;
+      }
+
+      .main-section {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        flex: 1;
+      }
+
+      .content {
+        padding: 1rem 2rem;
+        height: 100%;
+        flex: 1;
+        display: flex;
+        flex-flow: column;
+      }
+
+      #theme-switch:checked ~ #page {
+        --text-color: var(--light-text);
+        --bg-color: var(--light-bg);
+        --accent-color: var(--light-accent);
+        --contrast-color: var(--light-contrast);
+        --filter: var(--light-filter);
+      }
+
+      /* Theme switcher */
+      #theme-switch {
+        /* Hides the checkbox */
+        position: absolute !important;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+      }
+
+      .switch-label {
+        cursor: pointer;
+        display: flex;
+      }
+
+      .switch-label::before {
+        content: var(--switch-icon);
+        font-size: 40px;
+        transition: text-shadow 0.2s;
+      }
+
+      .switch-label::after {
+        align-self: center;
+        content: var(--switch-text);
+        color: var(--switch-shadow-color);
+        font-size: 28px;
+        line-height: 40px;
+        opacity: 0;
+        padding-left: 15px;
+        transition: opacity 0.2s;
+      }
+
+      #theme-switch:focus ~ #page .switch-label::before,
+      .switch-label:hover::before {
+        text-shadow: 0 0 15px var(--switch-shadow-color);
+      }
+
+      #theme-switch:focus ~ #page .switch-label::after,
+      .switch-label:hover::after {
+        opacity: 1;
+      }
+    </style>
+  </body>
+</html>

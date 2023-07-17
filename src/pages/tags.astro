@@ -1,0 +1,31 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Tag from '../components/Tag.astro';
+import { getTags } from '../utils';
+import Empty from '../components/Empty.astro';
+
+const tags = await getTags();
+---
+
+<SiteLayout>
+  {
+    !!tags.length ? (
+      <div class="container">
+        {tags.map((tag) => (
+          <Tag {...tag} />
+        ))}
+      </div>
+    ) : (
+      <Empty />
+    )
+  }
+</SiteLayout>
+
+<style>
+  .container {
+    margin: 2rem auto;
+    display: flex;
+    max-width: 30rem;
+    flex-flow: row wrap;
+  }
+</style>

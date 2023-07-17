@@ -1,0 +1,17 @@
+---
+import { FEATURE_FLAGS } from '../constants';
+import SiteLayout from '../layouts/SiteLayout.astro';
+
+if (!FEATURE_FLAGS.ABOUT_PAGE) return Astro.redirect('/404');
+---
+
+<SiteLayout><section class="container no-select">👋</section></SiteLayout>
+
+<style>
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+</style>

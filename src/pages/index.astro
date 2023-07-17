@@ -1,0 +1,59 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { __DEV__ } from '../constants';
+import { getSortedAndFilteredPosts } from '../utils';
+import PostListItem from '../components/PostListItem.astro';
+import Empty from '../components/Empty.astro';
+
+const tag = Astro.url.searchParams.get('tag');
+
+const allPosts = await getSortedAndFilteredPosts(tag);
+---
+
+<SiteLayout>
+  {
+    !!allPosts.length ? (
+      <section class="container no-select">
+        <h1 class="name">özenç's site</h1>
+        <h2 class="sub">the internet was a mistake</h2>
+        <div class="posts">
+          {allPosts.map((post) => (
+            <PostListItem {...post} />
+          ))}
+        </div>
+      </section>
+    ) : (
+      <Empty />
+    )
+  }
+</SiteLayout>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 100%;
+    max-width: 45rem;
+    margin-top: 2rem;
+  }
+
+  .name {
+    font-size: 1.5em;
+    font-weight: 900;
+    padding: 8px;
+    line-height: 0;
+    margin: 0;
+  }
+
+  .sub {
+    font-size: 0.5em;
+    padding: 8px;
+  }
+
+  .posts {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+</style>

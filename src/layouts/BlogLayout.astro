@@ -1,0 +1,72 @@
+---
+import { format } from 'date-fns';
+import { DATE_FORMAT_SHORT, SITE_DESCRIPTION, SITE_TITLE } from '../constants';
+import SiteLayout from './SiteLayout.astro';
+import FooterTag from '../components/FooterTag.astro';
+
+const { title, description, pubDate, tags, timeToRead } = Astro.props;
+---
+
+<SiteLayout
+  title={`${title} | ${SITE_TITLE}`}
+  description={`${description} | ${SITE_DESCRIPTION}`}
+>
+  <article class="container">
+    <h1 class="title">
+      {title}
+    </h1>
+    {description && <h3 class="description">{description}</h3>}
+    <h5 class="meta">
+      {format(pubDate, DATE_FORMAT_SHORT)} &bull; {timeToRead}
+    </h5>
+
+    <hr />
+
+    <slot />
+
+    <hr />
+    <div class="tags">
+      {tags.map((tag: string) => <FooterTag tag={tag} />)}
+    </div>
+  </article>
+</SiteLayout>
+
+<style>
+  .container {
+    font-size: 1em;
+    line-height: 1.4;
+    max-width: 45rem;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 2em;
+    font-weight: 900;
+    line-height: 1.2;
+  }
+
+  .description {
+    font-size: 1em;
+  }
+
+  .meta {
+    font-size: 1em;
+  }
+
+  hr {
+    margin: 1.5rem 0;
+    color: var(--accent-color);
+  }
+
+  .tags {
+    display: flex;
+    gap: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 0;
+    }
+  }
+</style>

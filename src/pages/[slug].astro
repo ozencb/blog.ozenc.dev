@@ -1,0 +1,21 @@
+---
+import { __DEV__ } from '../constants';
+import BlogLayout from '../layouts/BlogLayout.astro';
+import { getAllArticles } from '../utils';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const articles = await getAllArticles();
+
+  return articles.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry }
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<BlogLayout {...entry}><Content /></BlogLayout>

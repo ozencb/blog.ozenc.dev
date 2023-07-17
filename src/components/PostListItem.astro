@@ -1,0 +1,81 @@
+---
+import { format } from 'date-fns';
+import type { PostType } from '../types';
+
+import ArticleIcon from '../assets/document_stack.svg';
+import ResourceIcon from '../assets/chain.svg';
+import ProjectIcon from '../assets/floppy.svg';
+import { DATE_FORMAT_SHORT } from '../constants';
+
+const { slug, url, description, title, pubDate, type } = Astro.props;
+
+const isSameOrigin = type === 'ARTICLE';
+
+const typeIcons: { [key in PostType]?: string } = {
+  ARTICLE: ArticleIcon,
+  RESOURCE: ResourceIcon,
+  PROJECT: ProjectIcon
+};
+---
+
+<a
+  href={isSameOrigin ? `/${slug}` : url}
+  target={isSameOrigin ? '_self' : '_blank'}
+  class="post link"
+>
+  <div>
+    <div class="title">
+      <div>{title}</div>
+      <img src={typeIcons[type]} alt={typeIcons[type]} width="1.5rem" class="type-icon" />
+    </div>
+
+    {description && <div class="description">{description}</div>}
+  </div>
+
+  {pubDate && <div class="meta">{format(pubDate, DATE_FORMAT_SHORT)}</div>}
+</a>
+
+<style>
+  .post {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 2px solid var(--accent-color);
+    min-height: 4rem;
+    word-wrap: break-word;
+    word-break: normal;
+  }
+
+  .post:hover {
+    background-color: var(--accent-color);
+  }
+
+  .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+  }
+
+  .type-icon {
+    width: 1.5rem;
+    filter: var(--filter);
+    margin: 0 0 auto 1rem;
+  }
+
+  .description {
+    font-size: 0.7em;
+    margin-bottom: 0.5rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .meta {
+    font-size: 0.7em;
+    margin-bottom: 4px;
+  }
+</style>

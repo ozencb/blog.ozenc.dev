@@ -1,0 +1,107 @@
+:root {
+  --font-family-monospace: 'Courier', monospace;
+
+  --dark-bg: #111;
+  --dark-text: #fff;
+  --dark-accent: #222;
+  --dark-contrast: #ccc;
+  --dark-filter: invert(1);
+
+  --light-bg: #fff;
+  --light-text: #111;
+  --light-accent: #eee;
+  --light-contrast: #444;
+  --light-filter: invert(0);
+
+  /* Default mode */
+  --text-color: var(--dark-text);
+  --bg-color: var(--dark-bg);
+  --accent-color: var(--dark-accent);
+  --contrast-color: var(--dark-contrast);
+  --filter: var(--dark-filter);
+
+  --primary: #22d2a0;
+  --secondary: #192824;
+  --green: #1fc11b;
+  --yellow: #ffd913;
+  --orange: #ff9c55;
+  --red: #ff5555;
+  --aqua: #5bc0eb;
+}
+
+html,
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-size: 1.2em;
+  font-weight: bolder;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1em;
+  }
+}
+
+body:has(#theme-switch:checked) {
+  --bg-color: var(--light-bg);
+}
+
+a {
+  color: var(--aqua);
+  word-wrap: break-word;
+}
+
+a.link {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+a:visited.link {
+  color: var(--text-color);
+}
+
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+									supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* Astro override */
+
+p > code {
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  padding: 3px 5px;
+  font-size: 0.8em;
+}
+
+p > img {
+  width: 100%;
+  height: auto;
+}
+
+pre.astro-code {
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  padding: 6px;
+  font-size: 0.8em;
+}
+
+table,
+thead,
+tr,
+th,
+td {
+  padding: 5px;
+  border: 1px solid var(--contrast-color);
+  border-collapse: collapse;
+}
