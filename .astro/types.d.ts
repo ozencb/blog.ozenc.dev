@@ -238,6 +238,20 @@ declare module 'astro:content' {
   collection: "article";
   data: InferEntrySchema<"article">
 } & { render(): Render[".md"] };
+"rust/traits.md": {
+	id: "rust/traits.md";
+  slug: "rust-traits";
+  body: string;
+  collection: "article";
+  data: InferEntrySchema<"article">
+} & { render(): Render[".md"] };
+"terminal-friends/terminal-friends.md": {
+	id: "terminal-friends/terminal-friends.md";
+  slug: "terminal-friends";
+  body: string;
+  collection: "article";
+  data: InferEntrySchema<"article">
+} & { render(): Render[".md"] };
 };
 
 	};
