@@ -231,6 +231,13 @@ declare module 'astro:content' {
   collection: "article";
   data: InferEntrySchema<"article">
 } & { render(): Render[".md"] };
+"photography/pinhole-redesign.md": {
+	id: "photography/pinhole-redesign.md";
+  slug: "pinhole-redesign";
+  body: string;
+  collection: "article";
+  data: InferEntrySchema<"article">
+} & { render(): Render[".md"] };
 "proxmox-mount-points/proxmox-mount-points.md": {
 	id: "proxmox-mount-points/proxmox-mount-points.md";
   slug: "proxmox-mount-points";
