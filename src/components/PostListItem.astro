@@ -11,7 +11,7 @@ const { slug, url, description, title, pubDate, type } = Astro.props;
 
 const isSameOrigin = type === 'ARTICLE';
 
-const typeIcons: { [key in PostType]?: string } = {
+const typeIcons: { [key in PostType]?: ImageMetadata } = {
   ARTICLE: ArticleIcon,
   RESOURCE: ResourceIcon,
   PROJECT: ProjectIcon
@@ -27,8 +27,8 @@ const typeIcons: { [key in PostType]?: string } = {
     <div class="title">
       <div>{title}</div>
       <img
-        src={typeIcons[type]}
-        alt={typeIcons[type]}
+        src={typeIcons[type].src}
+        alt={type}
         width="1.5rem"
         class="type-icon"
       />
