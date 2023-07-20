@@ -28,7 +28,7 @@ This was my favorite camera to shoot with for a long time. I made it from whatev
 
 I had even drawn a now-lost schematic diagrams before building it to make sure I was doing everything right.
 
-As you can tell, it was a project-of-love but it had its problems.
+As you can tell, it is a product-of-love but it had its problems.
 
 Namely, unintentional multiple exposures:
 
