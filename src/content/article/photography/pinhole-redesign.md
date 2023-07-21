@@ -24,7 +24,7 @@ I want all of these to sport a 1/4" tripod mount, replaceable pinhole plates, ma
 ![img](../../../assets/content/photography/pinhole/pinhole-old.jpeg)
 ![img](../../../assets/content/photography/pinhole/pinhole-old-2.jpeg)
 
-This was my favorite camera to shoot with for a long time. I made it from whatever material I had at home at the time: wood from an old cigar box, metal sheet from a soda can, knobs from skateboard bushings, one spool-catch (or whatever they are called) from an old FM radio antenna and the other one from a scrapped Zorki 4K, packaging paper, electrical tape, and other random stuff that I around.
+This was my favorite camera to shoot with for a long time. I made it from whatever material I had at home at the time: wood from an old cigar box, metal sheet from a soda can, knobs from skateboard bushings, one spool-catch (or whatever they are called) from an old FM radio antenna and the other one from a scrapped Zorki 4K, packaging paper, electrical tape, and other random stuff that I found around.
 
 I had even drawn a now-lost schematic diagrams before building it to make sure I was doing everything right.
 
