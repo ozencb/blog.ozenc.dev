@@ -70,7 +70,8 @@ a:visited.link {
 
 /* Astro override */
 
-p > code {
+p > code,
+li > code {
   background-color: var(--accent-color);
   border-radius: 2px;
   padding: 3px 5px;
