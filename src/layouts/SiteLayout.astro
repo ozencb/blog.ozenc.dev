@@ -40,7 +40,19 @@ const { title, description } = Astro.props;
         '.theme-switch'
       ) as HTMLInputElement;
       if (themeSwitch) {
-        themeSwitch.checked = localStorage.getItem('switchedTheme') === 'true';
+        const switchThemeStorageValue = localStorage.getItem('switchedTheme');
+
+        if (switchThemeStorageValue) {
+          console.log('if');
+          themeSwitch.checked = switchThemeStorageValue === 'true';
+        } else {
+          console.log('else');
+          const isUserPrefersLightTheme = window.matchMedia(
+            '(prefers-color-scheme: light)'
+          );
+
+          themeSwitch.checked = isUserPrefersLightTheme.matches;
+        }
 
         themeSwitch.addEventListener('change', function (e) {
           if (e.currentTarget && e.currentTarget['checked'] === true) {
@@ -48,7 +60,7 @@ const { title, description } = Astro.props;
             localStorage.setItem('switchedTheme', 'true');
           } else {
             // Remove item if theme is switched back to normal
-            localStorage.removeItem('switchedTheme');
+            localStorage.setItem('switchedTheme', 'false');
           }
         });
       }
