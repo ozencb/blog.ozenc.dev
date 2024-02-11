@@ -28,7 +28,7 @@ export const getAllArticles = async () =>
     timeToRead: calculateReadingTime(item.body)
   }));
 
-export const getSortedAndFilteredPosts = async (tag: string | null) => {
+export const getSortedAndFilteredPosts = async (tag?: string | null) => {
   const articles = await getAllArticles();
   const external = await getExternalPosts();
 

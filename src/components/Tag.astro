@@ -6,7 +6,7 @@ type Props = TagType;
 const { tag, count } = Astro.props;
 ---
 
-<a class="tag" href={`/?tag=${tag}`}>
+<a class="tag" href={`/tags/${tag}`}>
   #{tag}<sup class="count">{count}</sup>
 </a>
 

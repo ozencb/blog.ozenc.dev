@@ -1,11 +1,18 @@
 ---
-import SiteLayout from '../layouts/SiteLayout.astro';
-import { __DEV__ } from '../constants';
-import { getSortedAndFilteredPosts } from '../utils';
-import PostListItem from '../components/PostListItem.astro';
-import Empty from '../components/Empty.astro';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { __DEV__ } from '../../constants';
+import { getSortedAndFilteredPosts, getTags } from '../../utils';
+import PostListItem from '../../components/PostListItem.astro';
+import Empty from '../../components/Empty.astro';
 
-const allPosts = await getSortedAndFilteredPosts();
+export async function getStaticPaths() {
+  const tags = await getTags();
+  return tags?.map(({ tag }) => ({ params: { tag } }));
+}
+
+const allPosts = await getSortedAndFilteredPosts(
+  Astro.url.pathname.replace('/tags/', '')
+);
 ---
 
 <SiteLayout>
