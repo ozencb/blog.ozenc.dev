@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://blog.ozenc.io',
   integrations: [sitemap()],
-  output: 'static',
+  output: 'server',
   experimental: {
     assets: true
   },
