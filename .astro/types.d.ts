@@ -217,13 +217,6 @@ declare module 'astro:content' {
   collection: "article";
   data: InferEntrySchema<"article">
 } & { render(): Render[".md"] };
-"advent-of-code/2015-05.md": {
-	id: "advent-of-code/2015-05.md";
-  slug: "advent-of-code-2015-05";
-  body: string;
-  collection: "article";
-  data: InferEntrySchema<"article">
-} & { render(): Render[".md"] };
 "advent-of-code/intro.md": {
 	id: "advent-of-code/intro.md";
   slug: "advent-of-code-intro";
