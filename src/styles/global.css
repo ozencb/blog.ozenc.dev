@@ -1,5 +1,10 @@
+@font-face {
+  font-family: 'Courier Prime';
+  src: url(../assets/fonts/CourierPrime-Regular.ttf);
+}
+
 :root {
-  --font-family-monospace: 'Courier', monospace;
+  --font-family-monospace: 'Courier Prime', 'Courier', monospace;
 
   --dark-bg: #111;
   --dark-text: #fff;
