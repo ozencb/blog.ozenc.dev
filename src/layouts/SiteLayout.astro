@@ -53,6 +53,10 @@ const { title, description } = Astro.props;
 
           themeSwitch.checked = isUserPrefersLightTheme.matches;
         }
+        document.documentElement.setAttribute(
+          'theme',
+          themeSwitch.checked ? 'light' : 'dark'
+        );
 
         themeSwitch.addEventListener('change', function (e) {
           if (e.currentTarget && e.currentTarget['checked'] === true) {

@@ -83,6 +83,10 @@ import logo from '../assets/logo.png';
     width: 100%;
   }
 
+  body:has(#theme-switch:checked) .logo .logo-img {
+    filter: invert(1);
+  }
+
   .logo svg:hover {
     animation: rainbow 1s ease infinite;
   }
