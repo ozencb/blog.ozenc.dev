@@ -10,9 +10,7 @@ export async function getStaticPaths() {
   return tags?.map(({ tag }) => ({ params: { tag } }));
 }
 
-const allPosts = await getSortedAndFilteredPosts(
-  Astro.url.pathname.replace('/tags/', '')
-);
+const allPosts = await getSortedAndFilteredPosts(Astro.params?.tag);
 ---
 
 <SiteLayout>
