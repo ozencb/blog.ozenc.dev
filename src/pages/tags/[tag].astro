@@ -17,7 +17,7 @@ const allPosts = await getSortedAndFilteredPosts(Astro.params?.tag);
   {
     !!allPosts.length ? (
       <section class="container no-select">
-        <h1 class="name">özenç's site</h1>
+        <h1 class="name">özenç's blog</h1>
         <h2 class="sub">the internet was a mistake</h2>
         <div class="posts">
           {allPosts.map((post) => (
