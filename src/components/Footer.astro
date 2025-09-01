@@ -6,6 +6,8 @@ import { Link } from 'astro-link';
 <footer class="container">
   {FEATURE_FLAGS.ABOUT_PAGE && <Link href="/about">aboutme</Link>}
 
+  <Link href="https://ozenc.dev" externalInNewTab={false}>home</Link>
+
   <Link href="https://github.com/ozencb" externalInNewTab={true}>github</Link>
 
   <Link
