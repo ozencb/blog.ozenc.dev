@@ -1,7 +1,7 @@
-export type PostType = 'ARTICLE' | 'RESOURCE' | 'PROJECT';
+export type PostType = "ARTICLE" | "RESOURCE" | "PROJECT";
 
 export type ExternalPost = {
-  type: Omit<PostType, 'ARTICLE'>;
+  type: Exclude<PostType, "ARTICLE">;
   title: string;
   description?: string;
   url: string;
