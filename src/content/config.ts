@@ -1,16 +1,26 @@
-import { z, defineCollection } from 'astro:content';
+import { z, defineCollection } from "astro:content";
+
+export const pubDate = z.preprocess((val) => {
+  if (typeof val === "string") {
+    return new Date(val);
+  }
+  if (val instanceof Date) {
+    return val;
+  }
+  return val;
+}, z.date());
 
 const articleCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
     draft: z.boolean(),
-    pubDate: z.string().transform((str) => new Date(str)),
+    pubDate: pubDate,
     tags: z.array(z.string()).optional(),
-    image: z.string().optional()
-  })
+    image: z.string().optional(),
+  }),
 });
 
 export const collections = {
-  article: articleCollection
+  article: articleCollection,
 };
