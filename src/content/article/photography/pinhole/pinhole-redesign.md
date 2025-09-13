@@ -21,8 +21,8 @@ I want all of these to sport a 1/4" tripod mount, replaceable pinhole plates, ma
 
 ## The Old Panoramic Pinhole
 
-![img](../../../assets/content/photography/pinhole/pinhole-old.jpeg)
-![img](../../../assets/content/photography/pinhole/pinhole-old-2.jpeg)
+![img](./assets/pinhole-old.jpeg)
+![img](./assets/pinhole-old-2.jpeg)
 
 This was my favorite camera to shoot with for a long time. I made it from whatever material I had at home at the time: wood from an old cigar box, metal sheet from a soda can, knobs from skateboard bushings, one spool-catch (or whatever they are called) from an old FM radio antenna and the other one from a scrapped Zorki 4K, packaging paper, electrical tape, and other random stuff that I found around.
 
@@ -32,23 +32,23 @@ As you can tell, it is a product-of-love but it had its problems.
 
 Namely, unintentional multiple exposures:
 
-![img](../../../assets/content/photography/pinhole/problem-1.jpeg)
-![img](../../../assets/content/photography/pinhole/problem-2.jpeg)
+![img](./assets/problem-1.jpeg)
+![img](./assets/problem-2.jpeg)
 
 Poor film alignment:
 
-![img](../../../assets/content/photography/pinhole/problem-3.jpeg)
+![img](./assets/problem-3.jpeg)
 
 Occasional light leaks:
 
-![img](../../../assets/content/photography/pinhole/problem-4.jpeg)
+![img](./assets/problem-4.jpeg)
 
 and others that I cannot remember for now. So, it wasn't the most reliable thing ever. But, when it worked, it worked beautifully.
 
-![img](../../../assets/content/photography/pinhole/panoramic-1.jpeg)
-![img](../../../assets/content/photography/pinhole/panoramic-2.jpeg)
-![img](../../../assets/content/photography/pinhole/panoramic-3.jpeg)
-![img](../../../assets/content/photography/pinhole/panoramic-4.jpeg)
+![img](./assets/panoramic-1.jpeg)
+![img](./assets/panoramic-2.jpeg)
+![img](./assets/panoramic-3.jpeg)
+![img](./assets/panoramic-4.jpeg)
 
 
 ## Redesign
