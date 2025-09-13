@@ -1,8 +1,8 @@
 ---
-import { format } from 'date-fns';
-import { DATE_FORMAT_SHORT, SITE_DESCRIPTION, SITE_TITLE } from '../constants';
-import SiteLayout from './SiteLayout.astro';
-import FooterTag from '../components/FooterTag.astro';
+import { format } from "date-fns";
+import { DATE_FORMAT_SHORT, SITE_DESCRIPTION, SITE_TITLE } from "../constants";
+import SiteLayout from "./SiteLayout.astro";
+import FooterTag from "../components/FooterTag.astro";
 
 const { title, description, pubDate, tags, timeToRead } = Astro.props;
 ---
@@ -26,7 +26,7 @@ const { title, description, pubDate, tags, timeToRead } = Astro.props;
 
     <hr />
     <div class="tags">
-      {tags.map((tag: string) => <FooterTag tag={tag} />)}
+      {tags?.map((tag: string) => <FooterTag tag={tag} />)}
     </div>
   </article>
 </SiteLayout>

@@ -6,7 +6,6 @@ export default defineConfig({
   site: "https://blog.ozenc.io",
   integrations: [sitemap()],
   output: "static",
-
   image: {
     service: sharpImageService(),
   },

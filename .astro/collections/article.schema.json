@@ -14,7 +14,20 @@
           "type": "boolean"
         },
         "pubDate": {
-          "type": "string"
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "integer",
+              "format": "unix-time"
+            }
+          ]
         },
         "tags": {
           "type": "array",
