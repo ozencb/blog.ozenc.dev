@@ -50,7 +50,6 @@ and others that I cannot remember for now. So, it wasn't the most reliable thing
 ![img](./assets/panoramic-3.jpeg)
 ![img](./assets/panoramic-4.jpeg)
 
-
 ## Redesign
 
 I will start with the design process. BRB!
