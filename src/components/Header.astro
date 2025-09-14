@@ -1,6 +1,7 @@
 ---
 import logo from "../assets/icons/logo.svg";
-import theme from "../assets/icons/theme.svg";
+import lightOn from "../assets/icons/light-on.svg";
+import lightOff from "../assets/icons/light-off.svg";
 ---
 
 <header class="header no-select">
@@ -11,7 +12,8 @@ import theme from "../assets/icons/theme.svg";
   </a>
 
   <label id="lbl-theme-switch" class="switch-label" for="theme-switch">
-    <img src={theme.src} alt="moon" class="theme-switch-img dark" />
+    <img src={lightOff.src} alt="theme switch" class="theme-switch-img dark" />
+    <img src={lightOn.src} alt="theme switch" class="theme-switch-img light" />
   </label>
 </header>
 
@@ -72,19 +74,14 @@ import theme from "../assets/icons/theme.svg";
     height: 1.5rem;
     position: absolute;
     right: -50%;
-    filter: var(--filter);
   }
 
-  html[data-theme="light"] .theme-switch-img.dark {
-    display: none;
+  body:has(#theme-switch:checked) .theme-switch-img.light {
+    visibility: hidden;
   }
 
-  html[data-theme="dark"] .theme-switch-img.light {
-    display: none;
-  }
-
-  body:has(#theme-switch:checked) .logo .logo-img {
-    filter: invert(1);
+  body:not(:has(#theme-switch:checked)) .theme-switch-img.dark {
+    visibility: hidden;
   }
 
   .logo svg:hover {
