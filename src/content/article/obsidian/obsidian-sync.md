@@ -26,11 +26,8 @@ Because Obsidian is always available on all my devices and works perfectly with 
 
 To make this work, I wrote a simple GitHub Action. It watches the `websites/blog.ozenc.dev` folder inside my Obsidian vault repo. When something changes, the workflow pushes updates into the blog repo, which then triggers the usual Astro build and deployment. If this whole thing works fine, I will probably use Obsidian as the primary source of data for my other statically built websites. At that point, I would just add a new folder within `websites` folder and add a new workflow for it to do its thing.
 
-```mermaid
-graph LR;
-    A[Obsidian] -->|Sync| B[Obsidian Vault Repo];
-    B -->|Push| C[Blog Repo];
-    C -->|Deploy with Vercel| D[blog.ozenc.dev];
+```
+Obsidian --Sync--> Obsidian Vault Repo --Push--> Blog Repo --Deploy with Vercel--> blog.ozenc.dev
 ```
 
 Here’s the workflow in full:
