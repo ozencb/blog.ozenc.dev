@@ -2,7 +2,7 @@
 slug: 'advent-of-code-intro'
 title: 'Advent of Code: Intro'
 pubDate: "2023-07-14"
-draft: false
+draft: true
 tags: ['advent-of-code', 'advent-of-code-2015']
 ---
 
