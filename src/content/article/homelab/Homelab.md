@@ -7,5 +7,3 @@ tags: ['photography', 'pinhole']
 ---
 
 
-
-
