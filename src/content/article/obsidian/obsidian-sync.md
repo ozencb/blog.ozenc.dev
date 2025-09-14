@@ -28,9 +28,9 @@ To make this work, I wrote a simple GitHub Action. It watches the `websites/blog
 
 ```mermaid
 graph LR;
-    A[Obsidian] -->|Sync| B[GitHub];
-    B -->|Push| C[Astro];
-    C -->|Deploy| D[Blog];
+    A[Obsidian] -->|Sync| B[Obsidian Vault Repo];
+    B -->|Push| C[Blog Repo];
+    C -->|Deploy with Vercel| D[blog.ozenc.dev];
 ```
 
 Here’s the workflow in full:
