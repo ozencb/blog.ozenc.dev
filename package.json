@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "install-playwright": "pnpm exec playwright install && pnpm exec playwright install-deps",
+    "install-playwright": "pnpm exec playwright install chromium",
     "build:prod": "npm run install-playwright && astro build",
     "preview": "astro preview",
     "astro": "astro"
