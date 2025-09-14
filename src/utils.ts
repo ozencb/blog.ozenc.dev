@@ -1,14 +1,14 @@
-import { getCollection, getEntryBySlug } from 'astro:content';
-import { PostType, TagType } from './types';
-import { __DEV__ } from './constants';
-import externalPosts from './content/external';
+import { getCollection, getEntryBySlug } from "astro:content";
+import type { PostType, TagType } from "./types";
+import { __DEV__ } from "./constants";
+import externalPosts from "./content/external";
 
 export const calculateReadingTime = (text: string) => {
   if (!text) return;
 
   const WORDS_PER_MINUTE = 200;
 
-  const clean = text.replace(/<\/?[^>]+(>|$)/g, '');
+  const clean = text.replace(/<\/?[^>]+(>|$)/g, "");
   const numberOfWords = clean.split(/\s/g).length;
   const time = Math.ceil(numberOfWords / WORDS_PER_MINUTE);
   return `${time} min read`;
@@ -20,12 +20,12 @@ export const getExternalPosts = async () => {
 
 export const getAllArticles = async () =>
   (
-    await getCollection('article', ({ data }) => data.draft !== true || __DEV__)
+    await getCollection("article", ({ data }) => data.draft !== true || __DEV__)
   ).map((item) => ({
     ...item,
     ...item.data,
-    type: 'ARTICLE' as PostType,
-    timeToRead: calculateReadingTime(item.body)
+    type: "ARTICLE" as PostType,
+    timeToRead: calculateReadingTime(item.body),
   }));
 
 export const getSortedAndFilteredPosts = async (tag?: string | null) => {
@@ -56,7 +56,7 @@ export const getTags = async (): Promise<TagType[]> => {
     const [key, value] = entry;
     return {
       tag: key,
-      count: value
+      count: value,
     } as TagType;
   });
 };
