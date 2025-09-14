@@ -14,6 +14,6 @@ export default defineConfig({
     syntaxHighlight: {
       excludeLangs: ["mermaid", "math"],
     },
-    rehypePlugins: [rehypeMermaid],
+    // rehypePlugins: [rehypeMermaid],
   },
 });
