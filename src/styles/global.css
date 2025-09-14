@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'Courier Prime';
+  font-family: "Courier Prime";
   src: url(../assets/fonts/CourierPrime-Regular.ttf);
 }
 
 :root {
-  --font-family-monospace: 'Courier Prime', 'Courier', monospace;
+  --font-family-monospace: "Courier Prime", "Courier", monospace;
 
   --dark-bg: #111;
   --dark-text: #fff;
@@ -109,4 +109,9 @@ td {
   padding: 5px;
   border: 1px solid var(--contrast-color);
   border-collapse: collapse;
+}
+
+.flowchart {
+  width: 100%;
+  height: auto;
 }
