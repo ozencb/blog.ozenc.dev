@@ -3,7 +3,7 @@ slug: obsidian-sync-blog
 title: How I publish on my blog with Obsidian
 pubDate: 2025-09-13
 draft: false
-description: ... without Obsidian Blog or Obsidian Sync
+description: ...without Obsidian Blog or Obsidian Sync
 ---
 
 I set up this blog a long time ago, hoping it would push me to write more. It has not. But over time, I kept coming up with “blog ideas” and I remember writing being so much fun, so I decided to revisit the project and make publishing a little smoother.
