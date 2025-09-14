@@ -10,5 +10,4 @@ I have set this blog up long time ago with the hope that it would push me to wri
 
 Back then, I wanted to set up a statically built, JavaScript-free system without any backend dependencies. I achieved this by using Markdown files as the content source and Astro framework for static generation ([check the source code here](https://github.com/ozencb/blog.ozenc.dev)). All the content is co-located with the source code, making it easy to manage and deploy. Vercel watches the repo for changes and automatically deploys the updated site.
 
-The main friction with this workflow is the necessity to access to a PC where I can do git operations after writing something. I wanted to 
-
+The main friction with this workflow is
