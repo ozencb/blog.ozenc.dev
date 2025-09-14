@@ -241,3 +241,78 @@ It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
 ::: warning
 *here be dragons*
 :::
+
+## Mermaid
+
+
+```mermaid
+graph TD
+    A[Start] --> B{Is it working?}
+    B -->|Yes| C[Great!]
+    B -->|No| D[Debug]
+    D --> B
+```
+
+```mermaid
+flowchart TD
+	A --> B
+	B --> C
+	C --> D
+	D --> E
+	E --> F
+	F --> G
+	G --> H
+	H --> I
+	H --> J
+	H --> K
+	H --> L
+	H --> M
+	H --> N
+	H --> O
+	H --> P
+```
+
+```mermaid
+pie title What Voldemort doesn't have?
+         "FRIENDS" : 2
+         "FAMILY" : 3
+         "NOSE" : 45
+```
+
+```mermaid
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>John: Hello John, how are you?
+    loop Healthcheck
+        John->>John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/>prevail!
+    John-->>Alice: Great!
+    John->>Bob: How about you?
+    Bob-->>John: Jolly good!
+```
+
+```mermaid
+graph TB
+    sq[Square shape] --> ci((Circle shape))
+
+    subgraph A
+        od>Odd shape]-- Two line&lt;br/>edge comment --> ro
+        di{Diamond with &lt;br/> line break} -.-> ro(Rounded&lt;br>square&lt;br>shape)
+        di==>ro2(Rounded square shape)
+    end
+
+    %% Notice that no text in shape are added here instead that is appended further down
+    e --> od3>Really long text with linebreak&lt;br>in an Odd shape]
+
+    %% Comments after double percent signs
+    e((Inner / circle&lt;br>and some odd &lt;br>special characters)) --> f(,.?!+-*ز)
+
+    cyr[Cyrillic]-->cyr2((Circle shape Начало));
+
+     classDef green fill:#9f6,stroke:#333,stroke-width:2px;
+     classDef orange fill:#f96,stroke:#333,stroke-width:4px;
+     class sq,e green
+     class di orange
+```
