@@ -36,8 +36,8 @@ graph LR;
 Here’s the workflow in full:
 
 ```yaml
-# Pushes files from obsidian to astro
-name: Sync blog -> astro
+# Pushes files from Obsidian vault to blog repo
+name: Sync vault -> blog
 
 on:
   push:
@@ -57,8 +57,9 @@ jobs:
       - name: Install rsync (for safe sync)
         run: sudo apt-get update && sudo apt-get install -y rsync
 
-      - name: Clone target astro repo
+      - name: Clone target blog repo
         env:
+          # create a fine grained PAT content write/read permissions, and set it as a secret on Obsidian vault repo
           TARGET_PAT: ${{ secrets.TARGET_REPO_PAT }}
         run: |
           # adjust target repo URL and branch
