@@ -7,7 +7,7 @@
     "start": "astro dev",
     "build": "astro build",
     "install-playwright": "pnpm exec playwright install chromium",
-    "build:prod": "npm run install-playwright && astro build",
+    "build:prod": "PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=1 npm run install-playwright && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
