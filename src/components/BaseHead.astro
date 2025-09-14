@@ -1,6 +1,6 @@
 ---
-import '../styles/normalize.css';
-import '../styles/global.css';
+import "../styles/normalize.css";
+import "../styles/global.css";
 
 export interface Props {
   title: string;
@@ -17,6 +17,12 @@ const { title, description } = Astro.props;
 <link rel="icon" type="image/gif" href="/favicon.gif" />
 <meta name="generator" content={Astro.generator} />
 <link rel="sitemap" href="/sitemap-index.xml" />
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  title={title}
+  href={new URL("rss.xml", Astro.site)}
+/>
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
