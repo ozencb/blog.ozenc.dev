@@ -18,8 +18,8 @@ Backups are handled weekly through Proxmox Backup Server, and an Rclone LXC push
 For DNS, my Deco mesh points to AdGuard, giving me network-wide blocking across all devices.
 
 Everything is mounted neatly, zip-tied to a small wooden pallet screwed to the wall, and all cables, including the ethernet cable running to the secondary Deco unit, are routed cleanly through cable channels.
-![lab-1](./assets/lab-1.png "Homelab")
+![lab-1](lab.png "Homelab")
 
 
 
-![lab-2](./assets/lab-2.png "Homelab")
+![lab-2](network.png "Network")
