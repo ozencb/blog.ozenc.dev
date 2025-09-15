@@ -17,3 +17,9 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 .vercel
+
+# generated types
+.astro/
+
+# jetbrains setting folder
+.idea/

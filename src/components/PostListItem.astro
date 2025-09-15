@@ -5,6 +5,7 @@ import type { PostType } from "../types";
 import ArticleIcon from "../assets/icons/document.svg";
 import ResourceIcon from "../assets/icons/url.svg";
 import ProjectIcon from "../assets/icons/floppy.svg";
+import LikedIcon from "../assets/icons/liked.svg";
 import { DATE_FORMAT_SHORT } from "../constants";
 
 const { slug, url, description, title, pubDate, type } = Astro.props;
@@ -15,13 +16,14 @@ const typeIcons: { [key in PostType]?: ImageMetadata } = {
   ARTICLE: ArticleIcon,
   RESOURCE: ResourceIcon,
   PROJECT: ProjectIcon,
+  LIKED: LikedIcon,
 };
 ---
 
 <a
   href={isSameOrigin ? `/${slug}` : url}
   target={isSameOrigin ? "_self" : "_blank"}
-  class="post link"
+  class={`post link ${pubDate ? "" : "small"}`}
 >
   <div>
     <div class="title">
@@ -45,6 +47,10 @@ const typeIcons: { [key in PostType]?: ImageMetadata } = {
     min-height: 4rem;
     word-wrap: break-word;
     word-break: normal;
+  }
+
+  .post.small {
+    min-height: unset;
   }
 
   .post:hover {

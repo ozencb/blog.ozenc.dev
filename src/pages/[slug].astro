@@ -1,7 +1,7 @@
 ---
-import { __DEV__ } from '../constants';
-import BlogLayout from '../layouts/BlogLayout.astro';
-import { getAllArticles } from '../utils';
+import { __DEV__ } from "../constants";
+import BlogLayout from "../layouts/BlogLayout.astro";
+import { getAllArticles } from "../utils";
 
 export const prerender = true;
 
@@ -10,7 +10,7 @@ export async function getStaticPaths() {
 
   return articles.map((entry) => ({
     params: { slug: entry.slug },
-    props: { entry }
+    props: { entry },
   }));
 }
 

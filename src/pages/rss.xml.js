@@ -10,8 +10,6 @@ export async function GET(context) {
   const posts = await getAllArticles();
   const site = import.meta.env.SITE;
 
-  console.log("----- ", site);
-
   return rss({
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,

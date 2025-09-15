@@ -1,7 +1,8 @@
-import { getCollection, getEntryBySlug } from "astro:content";
-import type { PostType, TagType } from "./types";
+import { getCollection } from "astro:content";
+import type { TagType } from "./types";
 import { __DEV__ } from "./constants";
 import externalPosts from "./content/external";
+import { externalPostSchema, likedPostSchema } from "./schemas";
 
 export const calculateReadingTime = (text: string) => {
   if (!text) return;
@@ -18,23 +19,32 @@ export const getExternalPosts = async () => {
   return externalPosts.filter((post) => post.draft !== true || __DEV__);
 };
 
-export const getAllArticles = async () =>
-  (
-    await getCollection("article", ({ data }) => data.draft !== true || __DEV__)
-  ).map((item) => ({
+export const getAllArticles = async () => {
+  const articleCollection = await getCollection(
+    "article",
+    ({ data }) => data.draft !== true || __DEV__
+  );
+
+  return articleCollection.map((item) => ({
     ...item,
     ...item.data,
-    type: "ARTICLE" as PostType,
+    type: "ARTICLE",
     timeToRead: calculateReadingTime(item.body),
   }));
+};
 
 export const getSortedAndFilteredPosts = async (tag?: string | null) => {
   const articles = await getAllArticles();
-  const external = await getExternalPosts();
+  const externalPosts = await getExternalPosts();
 
-  const sorted = [...articles, ...external].sort(
-    (a, b) => new Date(b.pubDate).valueOf() - new Date(a?.pubDate).valueOf()
+  const validatedExternalPosts = externalPosts.filter(
+    (post) => externalPostSchema.safeParse(post).success
   );
+
+  const sorted = [...articles, ...validatedExternalPosts].sort((a, b) => {
+    if (!a.pubDate || !b.pubDate) return 0;
+    return new Date(b.pubDate).valueOf() - new Date(a.pubDate).valueOf();
+  });
 
   return tag
     ? sorted.filter((post) => !tag || post?.tags?.includes(tag))

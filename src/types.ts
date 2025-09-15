@@ -1,14 +1,15 @@
-export type PostType = "ARTICLE" | "RESOURCE" | "PROJECT";
+import { z } from "astro:content";
+import type {
+  externalPostSchema,
+  articleSchema,
+  postTypeSchema,
+  likedPostSchema,
+} from "./schemas";
 
-export type ExternalPost = {
-  type: Exclude<PostType, "ARTICLE">;
-  title: string;
-  description?: string;
-  url: string;
-  pubDate: Date;
-  tags?: string[];
-  draft: boolean;
-};
+export type Article = z.infer<typeof articleSchema>;
+export type ExternalPost = z.infer<typeof externalPostSchema>;
+export type PostType = z.infer<typeof postTypeSchema>;
+export type LikedPost = z.infer<typeof likedPostSchema>;
 
 export type TagType = {
   tag: string;
