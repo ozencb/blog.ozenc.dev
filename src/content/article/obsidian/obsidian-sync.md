@@ -89,6 +89,10 @@ This works well, with some limitations:
 - Some Obsidian specific markdown syntax (like backlinks, image references) is not compatible with Astro. I have to manually correct some of these.
 - Everything is a bit asynchronous
 
+another caveat that I won't likely face is:
+
+- No one can contribute to articles through usual git processes, since my Vault is private and `articles` folder on `blog.ozenc.dev` repo gets replaced every time.
+
 ---
 
 ## What’s next?
