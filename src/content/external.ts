@@ -39,7 +39,7 @@ export const getLikedPosts = (): LikedPost[] => {
 const likedPosts: ExternalPost[] = getLikedPosts().map((post) => ({
   ...post,
   type: "LIKED",
-  tags: ["liked-blog"],
+  tags: ["liked"],
   draft: false,
 }));
 
