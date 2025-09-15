@@ -3,7 +3,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://blog.ozenc.io",
+  site: "https://blog.ozenc.dev",
   integrations: [sitemap()],
   output: "static",
   image: {
