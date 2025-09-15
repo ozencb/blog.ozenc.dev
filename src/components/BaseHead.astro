@@ -1,6 +1,7 @@
 ---
 import "../styles/normalize.css";
 import "../styles/global.css";
+import logo from "../assets/icons/logo.svg";
 
 export interface Props {
   title: string;
@@ -14,7 +15,7 @@ const { title, description } = Astro.props;
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/gif" href="/favicon.gif" />
+<link rel="icon" type="image/gif" href={logo.src} />
 <meta name="generator" content={Astro.generator} />
 <link rel="sitemap" href="/sitemap-index.xml" />
 <link
