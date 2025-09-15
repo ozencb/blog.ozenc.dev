@@ -98,4 +98,4 @@ In the future, I want to remove my PC from the equation so updates can be pushed
 - **iCloud sync or Syncthing:** Use `rclone` on my home serer to pull vault files directly from iCloud to the server periodically OR use Syncthing to sync vault across devices (with [Synctrain](https://apps.apple.com/dk/app/synctrain/id6553985316) on iOS).
 - **Push job:** Set up a file watcher or cron job to push updates to the vault repo.
 
-For now though the current setup is good enough.
+I have access to the articles pretty much everywhere. Single app, no extra manual work, just writing (and waiting for the thing to trigger). Good enough
