@@ -12,6 +12,8 @@ const { slug, url, description, title, pubDate, type } = Astro.props;
 
 const isSameOrigin = type === "ARTICLE";
 
+const isLikedPost = type === "LIKED";
+
 const typeIcons: { [key in PostType]?: ImageMetadata } = {
   ARTICLE: ArticleIcon,
   RESOURCE: ResourceIcon,
@@ -34,7 +36,11 @@ const typeIcons: { [key in PostType]?: ImageMetadata } = {
     {description && <div class="description">{description}</div>}
   </div>
 
-  {pubDate && <div class="meta">{format(pubDate, DATE_FORMAT_SHORT)}</div>}
+  {
+    pubDate && !isLikedPost && (
+      <div class="meta">{format(pubDate, DATE_FORMAT_SHORT)}</div>
+    )
+  }
 </a>
 
 <style>
