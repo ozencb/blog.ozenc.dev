@@ -20,11 +20,11 @@ export async function GET(context) {
       let html = parser.render(post.body);
 
       // Convert relative image URLs (and any other relative URLs) to absolute
-      html = html.replace(
-        /(<img[^>]+src=["'])(\/[^"']+)/g,
+      html = html.replaceAll(
+        /(<img[^>]+src=["'])([^"']+)/g,
         (_, prefix, src) => `${prefix}${site}${src}`
       );
-      html = html.replace(
+      html = html.replaceAll(
         /(<a[^>]+href=["'])(\/[^"']+)/g,
         (_, prefix, href) => `${prefix}${site}${href}`
       );
