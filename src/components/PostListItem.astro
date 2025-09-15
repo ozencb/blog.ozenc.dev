@@ -25,7 +25,7 @@ const typeIcons: { [key in PostType]?: ImageMetadata } = {
 <a
   href={isSameOrigin ? `/${slug}` : url}
   target={isSameOrigin ? "_self" : "_blank"}
-  class={`post link ${pubDate ? "" : "small"}`}
+  class={`post link ${pubDate && !isLikedPost ? "" : "small"}`}
 >
   <div>
     <div class="title">
