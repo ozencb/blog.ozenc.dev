@@ -23,14 +23,16 @@ Going this way, though, was not very straight forward as it needed some research
 
 Final result,
 
-1. **Needs** to fit 35mm films in the frame nicely. Support for 120mm is a huge plus for future proofing
-2. **Needs** to be easy to put together, and have few moving parts, and be sturdy
-3. **Needs** to be a lot cheaper than dedicated film scanners for it to make any sense
-4. **Does not need** motorization/automation. Speed is not a huge deal since finishing a roll takes weeks for me
+1. **Needed** to fit 35mm films in the frame nicely. Support for 120mm is a huge plus for future proofing
+2. **Needed** to be easy to put together, and have few moving parts, and be sturdy
+3. **Needed** to be a lot cheaper than dedicated film scanners for it to make any sense
+4. **Did not need** motorization/automation. Speed is not a huge deal since finishing a roll takes weeks for me
 
 # The Camera
 
 Everything had to be built around the camera I have, a **Nikon D5100**. Its 16 megapixel APS-C sensor (not full-frame) produces decent enough results since I have no plans for doing large prints, and it has a swiveling screen which is nice for adjusting things without doing acrobatics.
+
+At the time, I was hesitant about building a DIY rig since I did not have a macro lens and I thought decent macro lenses were as expensive as scanners but I found out that our local camera 
 
 
 # Ideas To Explore
