@@ -91,7 +91,7 @@ This works well, with some limitations:
 
 another caveat that I won't likely face is:
 
-- No one can contribute to articles through usual git processes, since my Vault is private and `articles` folder on `blog.ozenc.dev` repo gets replaced every time.
+- No one can contribute to articles through usual git processes, since my Vault is private and `articles` folder on `blog.ozenc.dev` repo gets replaced by the on in Obsidian vault every time.
 
 ---
 
