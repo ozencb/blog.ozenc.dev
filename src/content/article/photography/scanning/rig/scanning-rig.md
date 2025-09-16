@@ -30,9 +30,16 @@ Final result,
 
 # The Camera
 
-Everything had to be built around the camera I have, a **Nikon D5100**. Its 16 megapixel APS-C sensor (not full-frame) produces decent enough results since I have no plans for doing large prints, and it has a swiveling screen which is nice for adjusting things without doing acrobatics.
+Everything had to be built around the camera I have, a **Nikon D5100**. Its 16 megapixel APS-C sensor (not full-frame) produces decent enough results since I have no plans for doing large prints. It has a swiveling screen which is nice for adjusting things without doing acrobatics. Rest of the specs are just details, as they either exist in most modern digital cameras or they make no difference in this context.
 
-At the time, I was hesitant about building a DIY rig since I did not have a macro lens and I thought decent macro lenses were as expensive as scanners but I found out that our local camera 
+# The Lens
+
+At the time, I was hesitant about building a DIY rig since I did not have a macro lens and I thought decent macro lenses were as expensive as scanners but I found out that our local camera shops had many budget options. After some research, I purchased a second hand **Sigma 70 mm f/2.8 EX DG** (older non "Art" version).
+
+APS-C sensors has a crop factor of 1.5x so its full-frame equivalent would be 105mm (`70 * 1.5 `)
+
+
+The auto-focus does not work with D5100 body but film scanning requires manual focus anyway, so it was not a deal breaker. I
 
 
 # Ideas To Explore
