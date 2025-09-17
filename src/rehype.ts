@@ -1,11 +1,12 @@
 import type { Root, Html, Node } from "mdast";
 
 export default function rehypeSvgThemeTransformer() {
-  return (tree: Root) => visit(tree, "raw", transformer);
+  return (tree: Root) => visit(tree, predicate, transformer);
 }
 
-function predicate(node: Html): boolean {
+function predicate(node: any): boolean {
   return (
+    node.type === "raw" &&
     typeof node.value === "string" &&
     node.value.trim().startsWith("<svg") &&
     !node.value.includes("skip-rehype-all")
@@ -27,15 +28,15 @@ function transformer(node: Html): void {
 
 function visit<T extends Node>(
   node: Node,
-  type: string,
+  predicate: (node: T) => boolean,
   callback: (node: T) => void
 ): void {
   if (Array.isArray((node as any).children)) {
     for (const child of (node as any).children) {
-      if (child.type === type && predicate(child)) {
+      if (predicate(child as T)) {
         callback(child as T);
       }
-      visit(child, type, callback);
+      visit(child, predicate, callback);
     }
   }
 }
