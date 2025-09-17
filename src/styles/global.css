@@ -96,7 +96,7 @@ blockquote {
 
 pre.astro-code {
   background-color: var(--accent-color);
-  border-radius: 2px;
+  border-radius: 4px;
   padding: 6px;
   font-size: 0.8em;
 }
