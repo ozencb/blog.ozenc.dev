@@ -5,7 +5,8 @@ export default function rehypeSvgThemeTransformer() {
     visit(tree, "raw", (node: Html) => {
       if (
         typeof node.value === "string" &&
-        node.value.trim().startsWith("<svg")
+        node.value.trim().startsWith("<svg") &&
+        !node.value.includes("skip-rehype-all")
       ) {
         node.value = transformSvg(node.value);
       }
@@ -14,12 +15,19 @@ export default function rehypeSvgThemeTransformer() {
 }
 
 function transformSvg(svgString: string): string {
-  return svgString
-    .replace(/\sfill="[^"]*"/g, "")
-    .replace(/\sstroke="[^"]*"/g, "")
+  let newString = svgString
+
     .replace(/\s(width|height)="[^"]*"/g, "")
     .replace(/<svg([^>]*)>/, `<svg$1 role="img" aria-hidden="true"`)
     .replace(/<svg([^>]*)>/, `<svg$1 class="theme-markdown-svg">`);
+
+  if (!svgString.includes("skip-rehype-color")) {
+    newString = newString
+      .replace(/\sfill="[^"]*"/g, "")
+      .replace(/\sstroke="[^"]*"/g, "");
+  }
+
+  return newString;
 }
 
 // Minimal custom "visit" implementation
