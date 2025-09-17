@@ -101,7 +101,48 @@ becomes
 
 It is a handful, but all we need to understand with this is AST is, we can traverse through the tree recursively to visit each node, and check if the node is what we are looking for. In our case, the node should satisfy both `type === 'raw'` and `value.includes('<svg')` conditions. Once we find our target, we can simply modify the `value` property, which is the HTML element itself as a string.
 
-I 
+```typescript
+// rehype.ts
+export default function rehypeSvgThemeTransformer() {
+  return (tree: Root) => visit(tree, "raw", transformer);
+}
+
+function transformer(node: Html): void {
+  if (
+    typeof node.value !== "string" ||
+    !node.value.trim().startsWith("<svg") ||
+    node.value.includes("skip-rehype-all") // do not do any transformations if svg is marked as such
+  ) {
+    return; // does not meet our criteria, skip
+  }
+
+  node.value = node.value
+    .replace(/\s(width|height)="[^"]*"/g, "")
+    .replace(/<svg([^>]*)>/, `<svg$1 role="img" aria-hidden="true"`)
+    .replace(/<svg([^>]*)>/, `<svg$1 class="theme-markdown-svg">`);
+
+  if (!node.value.includes("skip-rehype-color")) {
+    node.value = node.value
+      .replace(/\sfill="[^"]*"/g, "")
+      .replace(/\sstroke="[^"]*"/g, "");
+  }
+}
+
+function visit<T extends Node>(
+  node: Node,
+  type: string,
+  callback: (node: T) => void
+): void {
+  if (Array.isArray((node as any).children)) {
+    for (const child of (node as any).children) {
+      if (child.type === type) {
+        callback(child as T);
+      }
+      visit(child, type, callback);
+    }
+  }
+}
+```
 
 ***Rehype***
 
