@@ -4,15 +4,15 @@ export default function rehypeSvgThemeTransformer() {
   return (tree: Root) => visit(tree, "raw", transformer);
 }
 
-function transformer(node: Html): void {
-  if (
-    typeof node.value !== "string" ||
-    !node.value.trim().startsWith("<svg") ||
-    node.value.includes("skip-rehype-all")
-  ) {
-    return;
-  }
+function predicate(node: Html): boolean {
+  return (
+    typeof node.value === "string" &&
+    node.value.trim().startsWith("<svg") &&
+    !node.value.includes("skip-rehype-all")
+  );
+}
 
+function transformer(node: Html): void {
   node.value = node.value
     .replace(/\s(width|height)="[^"]*"/g, "")
     .replace(/<svg([^>]*)>/, `<svg$1 role="img" aria-hidden="true"`)
@@ -32,7 +32,7 @@ function visit<T extends Node>(
 ): void {
   if (Array.isArray((node as any).children)) {
     for (const child of (node as any).children) {
-      if (child.type === type) {
+      if (child.type === type && predicate(child)) {
         callback(child as T);
       }
       visit(child, type, callback);
