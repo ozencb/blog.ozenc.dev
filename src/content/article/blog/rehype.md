@@ -11,7 +11,6 @@ Astro does allow you to add [plugins for markdown](https://docs.astro.build/en/g
 
 There is a [whole ecosystem](https://github.com/remarkjs/awesome-remark) built around them, but I simply needed these capabilities to apply some styling over `<svg>`s because I wanted to do some Excalidraw drawings for my blog posts, copy them to my markdown as `svg`  do the styling, and that's it. `svg`s also have the advantage of being much smaller then images for most cases, and they look crispier since they are vectoral.
 
-
 ```typescript
 // astro.config.mjs
 import rehypeSvgThemeTransformer from "./src/rehype.ts";
