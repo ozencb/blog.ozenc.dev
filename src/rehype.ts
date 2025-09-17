@@ -17,6 +17,7 @@ function transformSvg(svgString: string): string {
   return svgString
     .replace(/\sfill="[^"]*"/g, "")
     .replace(/\sstroke="[^"]*"/g, "")
+    .replace(/\s(width|height)="[^"]*"/g, "")
     .replace(/<svg([^>]*)>/, `<svg$1 role="img" aria-hidden="true"`)
     .replace(/<svg([^>]*)>/, `<svg$1 class="theme-markdown-svg">`);
 }

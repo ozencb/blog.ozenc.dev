@@ -119,8 +119,8 @@ td {
 .theme-markdown-svg {
   fill: currentColor;
   stroke: currentColor;
-}
-
-html[data-theme="dark"] .theme-markdown-svg {
-  color: #eee; /* or whatever theme color */
+  max-height: 50vh;
+  width: auto;
+  height: auto;
+  display: block;
 }
