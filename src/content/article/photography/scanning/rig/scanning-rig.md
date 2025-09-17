@@ -30,7 +30,7 @@ Final result,
 
 # The Camera
 
-Everything had to be built around the camera I have, a **Nikon D5100**. Its 16 megapixel APS-C sensor (not full-frame) produces decent enough results since I have no plans for doing large prints. It has a swiveling screen which is nice for adjusting things without doing acrobatics. Rest of the specs are just details, as they either exist in most modern digital cameras or they make no difference in this context.
+Everything had to be built around the camera I have, a **Nikon D5100**. Its 16 megapixel APS-C sensor (not full-frame) produces decent enough results since I have no plans for doing large prints. It has a swiveling screen which is nice for adjusting things without doing acrobatics. Rest of the specs and features are just details, as they either exist in most modern digital cameras or they make no difference in this context.
 
 However, the sensor being smaller than full frame is a limiting factor, which I will talk about in the next section.
 
@@ -38,13 +38,17 @@ However, the sensor being smaller than full frame is a limiting factor, which I 
 
 At the time, I was hesitant about building a DIY rig since I did not have a macro lens and I thought decent macro lenses were as expensive as scanners but I found out that our local camera shops had many budget options. After some research, I purchased a second hand **Sigma 70 mm f/2.8 EX DG** (older non "Art" version).
 
-APS-C sensors has a crop factor of 1.5x so its full-frame equivalent would be 105mm (`70 * 1.5 `). At 1:1 magnification, it means that
+APS-C sensor has a crop factor of 1.5x so its full-frame equivalent would be 105mm (`70 * 1.5`). The lens itself does 1:1 magnification, which means that an object with an area of `5cm x 5cm` reflects on to the sensor as  `5cm x 5cm`; its real size. So, a 35mm (`24cm x 26cm`) film frame would create a reflection of the same size. Since full-frame digital cameras have the exact same size for their sensors, 1:1 magnification creates an ideal scenario where you can fit in the 35mm film into the viewfinder and capture all its details without zooming out. With the same object to sensor distance, if you were to take out the full frame sensor out and put in the smaller APS-C, it would only cover some part of that perfectly reflected 35mm image. 1.5x smaller precisely. That means in order to fit the whole thing into the frame, we have to move the camera further away from the film, losing some detail. In theory, this is far from ideal but the camera still produces perfectly usable images at this greater distance. However, in order to fit 120mm film, we need to zoom out even more since medium formats are usually 6cm x 6cm or 6cm x 9cm, sometimes even bigger. I do not have any 120mm negatives lying around at the moment, but I reckon in order to compensate the loss of quality, I will have to not zoom out but opt in for doing some digital stitching instead. Stitching requires some more effort though, so I am not sure how viable or "fun" it is yet.
 
-The auto-focus does not work with D5100 body but film scanning requires manual focus anyway, so it was not a deal breaker. I
+The auto-focus does not work with D5100 body but film scanning requires manual focus anyway, so it was not a deal breaker. 
+
+Apart from these few disadvantages, the lens itself is great. It is very sharp, 
 
 # Copy Stand
 
 # Film Plane
+
+This is where all the 3D printing comes in. There are tons of readily available models
 
 
 # Ideas To Explore
