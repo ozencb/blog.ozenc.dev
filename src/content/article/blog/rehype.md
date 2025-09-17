@@ -14,7 +14,6 @@ There is a [whole ecosystem](https://github.com/remarkjs/awesome-remark) built a
 
 ```typescript
 // astro.config.mjs
-
 import rehypeSvgThemeTransformer from "./src/rehype.ts";
 
 export default defineConfig({
