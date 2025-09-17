@@ -36,6 +36,9 @@ importers:
       '@astrojs/sitemap':
         specifier: ^3.5.1
         version: 3.5.1
+      '@types/mdast':
+        specifier: ^4.0.4
+        version: 4.0.4
       astro:
         specifier: ^5.13.7
         version: 5.13.7(rollup@4.50.1)(typescript@5.9.2)

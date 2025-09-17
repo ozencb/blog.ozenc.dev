@@ -2,6 +2,7 @@
   "name": "blog.ozenc.io",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -12,6 +13,7 @@
   "devDependencies": {
     "@astrojs/rss": "^4.0.12",
     "@astrojs/sitemap": "^3.5.1",
+    "@types/mdast": "^4.0.4",
     "astro": "^5.13.7",
     "csv-parse": "^6.1.0",
     "sharp": "^0.34.3"
