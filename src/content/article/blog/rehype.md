@@ -9,7 +9,7 @@ draft: false
 
 Astro does allow you to add [plugins for markdown](https://docs.astro.build/en/guides/markdown-content/#markdown-plugins) files through [remark](https://remark.js.org/) and [rehype](https://github.com/rehypejs/rehype), allowing you to do all sorts of manipulations on your markdown content.
 
-There is a [whole ecosystem](https://github.com/remarkjs/awesome-remark) built around them, but I simply needed these capabilities to apply some styling over `<svg>`s because I wanted to do some Excalidraw drawings for my blog posts, copy them to my markdown as `svg`  do the styling, and that's it. `svg`s also have the advantage of being much smaller then images for most cases, and they look crispier since they are vectoral.
+There is a [whole ecosystem](https://github.com/remarkjs/awesome-remark) built around them, but I only needed these capabilities to apply some styling to `<svg>`s because I wanted to do some Excalidraw drawings for my blog posts, copy them to my markdown as `svg`  do the styling, and that's it. `svg`s also have the advantage of being much smaller then images for most cases, and they look crispier since they are vector-based.
 
 ```typescript
 // astro.config.mjs
@@ -23,7 +23,7 @@ export default defineConfig({
 
 ```
 
-The plugin itself basically gives you the HTML AST, so you can traverse through it and handle these objects as necessary.
+The plugin itself basically gives you the HTML AST, so you can traverse it and handle these objects as necessary.
 
 For example, this markdown
 
@@ -97,7 +97,7 @@ becomes
 }
 ```
 
-It is a handful, but all we need to understand with this is AST is, we can traverse through the tree recursively to visit each node, and check if the node is what we are looking for. In our case, the node should satisfy both `type === 'raw'` and `value.includes('<svg')` conditions. Once we find our target, we can simply modify the `value` property, which is the HTML element itself as a string.
+It is a handful, but all we need to understand with this AST is, we can traverse the tree recursively to visit each node, and check if the node is what we are looking for. In our case, the node should satisfy both `type === 'raw'` and `value.includes('<svg')` conditions. Once we find our target, we can simply modify the `value` property, which is the HTML element itself as a string.
 
 ```typescript
 // rehype.ts
