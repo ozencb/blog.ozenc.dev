@@ -25,16 +25,83 @@ export default defineConfig({
 
 ```
 
-The plugin itself 
+The plugin itself basically gives you the HTML AST, so you can traverse through it and handle these objects as necessary. 
 
+For example, this markdown
+
+```markdown
+# A heading
+
+some content..
+
+<div>html stuff</div>
+```
 
 becomes
 
 ```json
-
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "element",
+      "tagName": "h1",
+      "properties": {},
+      "children": [
+        {
+          "type": "text",
+          "value": "A heading",
+          "position": {
+            "start": { "line": 1, "column": 3, "offset": 2 },
+            "end": { "line": 1, "column": 12, "offset": 11 }
+          }
+        }
+      ],
+      "position": {
+        "start": { "line": 1, "column": 1, "offset": 0 },
+        "end": { "line": 1, "column": 12, "offset": 11 }
+      }
+    },
+    { "type": "text", "value": "\n" },
+    {
+      "type": "element",
+      "tagName": "p",
+      "properties": {},
+      "children": [
+        {
+          "type": "text",
+          "value": "some content..",
+          "position": {
+            "start": { "line": 3, "column": 1, "offset": 13 },
+            "end": { "line": 3, "column": 15, "offset": 27 }
+          }
+        }
+      ],
+      "position": {
+        "start": { "line": 3, "column": 1, "offset": 13 },
+        "end": { "line": 3, "column": 15, "offset": 27 }
+      }
+    },
+    { "type": "text", "value": "\n" },
+    {
+      "type": "raw",
+      "value": "<div>html stuff</div>",
+      "position": {
+        "start": { "line": 5, "column": 1, "offset": 29 },
+        "end": { "line": 5, "column": 22, "offset": 50 }
+      }
+    }
+  ],
+  "position": {
+    "start": { "line": 1, "column": 1, "offset": 0 },
+    "end": { "line": 5, "column": 22, "offset": 50 }
+  }
+}
 ```
 
+It is a handful, but all we need to understand with this is AST is, we can traverse through the tree recursively to visit each node, and check if the node is what we are looking for. In our case, the node should satisfy both `type === 'raw'` and `value.includes('<svg')` conditions. Once we find our target, we can simply modify the `value` property, which is the HTML element itself as a string.
 
+I 
 
 ***Rehype***
 
