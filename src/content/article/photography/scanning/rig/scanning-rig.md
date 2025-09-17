@@ -38,15 +38,23 @@ However, the sensor being smaller than full frame is a limiting factor, which I 
 
 At the time, I was hesitant about building a DIY rig since I did not have a macro lens and I thought decent macro lenses were as expensive as scanners but I found out that our local camera shops had many budget options. After some research, I purchased a second hand **Sigma 70 mm f/2.8 EX DG** (older non "Art" version).
 
-APS-C sensor has a crop factor of 1.5x so its full-frame equivalent would be 105mm (`70 * 1.5`). The lens itself does 1:1 magnification, which means that an object with an area of `5cm x 5cm` reflects on to the sensor as  `5cm x 5cm`; its real size. So, a 35mm (`24cm x 26cm`) film frame would create a reflection of the same size. Since full-frame digital cameras have the exact same size for their sensors, 1:1 magnification creates an ideal scenario where you can fit in the 35mm film into the viewfinder and capture all its details without zooming out. With the same object to sensor distance, if you were to take out the full frame sensor out and put in the smaller APS-C, it would only cover some part of that perfectly reflected 35mm image. 1.5x smaller precisely. That means in order to fit the whole thing into the frame, we have to move the camera further away from the film, losing some detail. In theory, this is far from ideal but the camera still produces perfectly usable images at this greater distance. However, in order to fit 120mm film, we need to zoom out even more since medium formats are usually 6cm x 6cm or 6cm x 9cm, sometimes even bigger. I do not have any 120mm negatives lying around at the moment, but I reckon in order to compensate the loss of quality, I will have to not zoom out but opt in for doing some digital stitching instead. Stitching requires some more effort though, so I am not sure how viable or "fun" it is yet.
+APS-C sensor has a crop factor of 1.5x so its full-frame equivalent would be 105mm (`70 * 1.5`). The lens itself does 1:1 magnification, which means that an object with an area of `5cm x 5cm` reflects on to the sensor as  `5cm x 5cm`; its real size. So, a 35mm (`24cm x 26cm`) film frame would create a reflection of the same size. Since full-frame digital cameras have the exact same size for their sensors, 1:1 magnification creates an ideal scenario where you can fit in the 35mm film into the viewfinder and capture all its details without zooming out. With the same object to sensor distance, if you were to take out the full frame sensor out and put in the smaller APS-C, it would only cover some part of that perfectly reflected 35mm image. 1.5x smaller precisely. That means in order to fit the whole thing into the frame, we have to move the camera further away from the film, losing some detail/density. In theory, this is far from ideal but the camera still produces perfectly usable images at this greater distance. However, in order to fit 120mm film, we need to zoom out even more since medium formats are usually 6cm x 6cm or 6cm x 9cm, sometimes even bigger. I do not have any 120mm negatives lying around at the moment, but I reckon in order to compensate the loss of quality, I will have to not zoom out but opt in for doing some digital stitching instead. Stitching requires some more effort though, so I am not sure how viable or "fun" it is yet.
 
-The auto-focus does not work with D5100 body but film scanning requires manual focus anyway, so it was not a deal breaker. 
+The auto-focus does not work with D5100 body but film scanning requires manual focus anyway, so it was not a deal breaker.
 
 Apart from these few disadvantages, the lens itself is great. It is very sharp in mid apertures (around 5.6 and 8 looks the best to me), edge performance is good, no visible distortions/barreling/aberrations (to my untrained eyes). Again, all other specs, features, and disadvantages can be ignored in this context.
 
 # Copy Stand
 
-I decided to go with the copy stand method, where the camera attached on to 
+There are many different DSLR scanner formats people use.
+
+- Copy stands
+- Lens attached contraptions (Like Valoi)
+- Rail based rigs
+- Tripods with inverted columns, camera facing down
+
+I decided to go with the first one because it seemed like the most versatile design for improving and adapting different parts. It does not take much space, it is solid and stable. It is very important for the rig to not move around because the film plane and the sensor plane has to be perfectly parallel. Even the slightest deviation or tilt can result in unfocused parts in the photo, since depth-of-field is so thin. I don't have the exact measurements, but at f5.6 to f8 where the image is sharpest for this lens, the depth of field is probably within one milimeter. 
+
 
 # Film Plane
 
