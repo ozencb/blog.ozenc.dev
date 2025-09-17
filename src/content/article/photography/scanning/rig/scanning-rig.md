@@ -42,9 +42,11 @@ APS-C sensor has a crop factor of 1.5x so its full-frame equivalent would be 105
 
 The auto-focus does not work with D5100 body but film scanning requires manual focus anyway, so it was not a deal breaker. 
 
-Apart from these few disadvantages, the lens itself is great. It is very sharp, 
+Apart from these few disadvantages, the lens itself is great. It is very sharp in mid apertures (around 5.6 and 8 looks the best to me), edge performance is good, no visible distortions/barreling/aberrations (to my untrained eyes). Again, all other specs, features, and disadvantages can be ignored in this context.
 
 # Copy Stand
+
+I decided to go with the copy stand method, where the camera attached on to 
 
 # Film Plane
 
