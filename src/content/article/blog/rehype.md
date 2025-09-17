@@ -3,6 +3,7 @@ slug: rehype-svg
 title: SVG Theming in Astro Markdown
 pubDate: 2025-09-17
 draft: false
+tags: ['astro', 'markdown', 'blog']
 ---
 
 *TL;DR*: [rehype.ts](https://github.com/ozencb/blog.ozenc.dev/blob/main/src/rehype.ts)
