@@ -163,8 +163,9 @@ This is what I do with the CSS class:
 }
 ```
 
+Try changing the blog theme and see how these three examples change:
 
-***Rehype***
+***Rehype (Default Behaviour)***
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72.81590956038394 56.416986086312704" width="145.6318191207679" height="112.83397217262541">
   <!-- svg-source:excalidraw --><metadata></metadata><defs><style class="style-fonts">
