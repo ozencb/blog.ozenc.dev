@@ -1,36 +1,30 @@
 import type { Root, Html, Node } from "mdast";
 
 export default function rehypeSvgThemeTransformer() {
-  return (tree: Root) => {
-    visit(tree, "raw", (node: Html) => {
-      if (
-        typeof node.value === "string" &&
-        node.value.trim().startsWith("<svg") &&
-        !node.value.includes("skip-rehype-all")
-      ) {
-        node.value = transformSvg(node.value);
-      }
-    });
-  };
+  return (tree: Root) => visit(tree, "raw", transformer);
 }
 
-function transformSvg(svgString: string): string {
-  let newString = svgString
+function transformer(node: Html): void {
+  if (
+    typeof node.value !== "string" ||
+    !node.value.trim().startsWith("<svg") ||
+    node.value.includes("skip-rehype-all")
+  ) {
+    return;
+  }
 
+  node.value = node.value
     .replace(/\s(width|height)="[^"]*"/g, "")
     .replace(/<svg([^>]*)>/, `<svg$1 role="img" aria-hidden="true"`)
     .replace(/<svg([^>]*)>/, `<svg$1 class="theme-markdown-svg">`);
 
-  if (!svgString.includes("skip-rehype-color")) {
-    newString = newString
+  if (!node.value.includes("skip-rehype-color")) {
+    node.value = node.value
       .replace(/\sfill="[^"]*"/g, "")
       .replace(/\sstroke="[^"]*"/g, "");
   }
-
-  return newString;
 }
 
-// Minimal custom "visit" implementation
 function visit<T extends Node>(
   node: Node,
   type: string,
