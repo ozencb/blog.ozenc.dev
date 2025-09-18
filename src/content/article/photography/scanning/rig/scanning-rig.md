@@ -1,6 +1,6 @@
 ---
 slug: scanning-rig
-title: Negative film scanning with DSLR
+title: Negative Film Scanning with a DSLR
 pubDate: 2025-09-17
 draft: true
 ---
@@ -9,56 +9,68 @@ draft: true
 
 ---
 
-I put together this simple DSLR film scanning rig to re-digitize (some of the shop scans I have are horrid) my negatives, and scan home-developed films. I went this way because:
+I put together this simple DSLR film scanning rig to re-digitize my negatives (some of the shop scans I had were horrid) and to scan my home-developed films. I chose this route because:
 
-- I had a DSLR laying around
-- Decent scanners are expensive or hard to come-by where I live
-- Second hand scanners are not guaranteed to not break
+- I already had a DSLR lying around
+- Decent scanners are expensive or hard to come by where I live
+- Second-hand scanners aren’t guaranteed to last
 
-Going this way, though, was not very straight forward as it needed some research, careful planning, and some DIY work. In this blog I will try to write how I did the thing that's been done many times by other people.
+That said, this wasn’t a straightforward path. It required research, careful planning, and some DIY work. In this blog post, I’ll walk through how I did the thing that's been done many times by other people.
 
-# Need/No Need
+---
 
-Final result,
+# Requirements
 
-1. **Needed** to fit 35mm films in the frame nicely. Support for 120mm would have been a huge plus
-2. **Needed** to be easy to put together,  have few moving parts, and be sturdy
-3. **Needed** to be a lot cheaper than dedicated film scanners for all this to make any sense
-4. **Did not need** motorization/automation. Speed is not a huge necessity since finishing a roll takes weeks for me
+The final setup had to meet a few needs:
+
+1. **Needed** to fit 35mm films in the frame nicely. Support for 120mm would have been a huge plus.
+2. **Needed** to be easy to assemble, with few moving parts, and sturdy.
+3. **Needed** to be much cheaper than dedicated film scanners for all this effort to make sense.
+4. **Did not need** motorization or automation. Speed is not a priority since finishing a roll takes weeks for me.
+
+---
 
 # The Camera
 
-Everything had to be built around the camera I have, a **Nikon D5100**. Its 16 megapixel APS-C sensor (not full-frame) produces decent enough results since I have no plans for doing large prints. It has a swiveling screen which is nice for adjusting things without doing acrobatics. Rest of the specs and features are just details, as they either exist in most modern digital cameras or they make no difference in this context.
+Everything had to be built around the camera I own: a **Nikon D5100**. Its 16MP APS-C sensor (not full-frame) is good enough for my needs since I don’t plan on making large prints. The swiveling screen it has is especially useful for making adjustments without doing acrobatics.
 
-However, the sensor being smaller than full frame is a limiting factor, which I will talk about in the next section.
+The rest of the specs are irrelevant here because they are either common in most modern digital cameras, or they don’t matter for scanning.
+
+The biggest limitation worth mentioning is that the APS-C sensor is smaller than full-frame, which introduces some challenges, which is covered in the lens section.
+
+---
 
 # The Lens
 
-At the time, I was hesitant about building a DIY rig since I did not have a macro lens and I thought decent macro lenses were as expensive as scanners but I found out that our local camera shops had many budget options. After some research, I purchased a second hand **Sigma 70 mm f/2.8 EX DG** (older non "Art" version).
+I picked up a second-hand **Sigma 70mm f/2.8 EX DG** (the older non-“Art” version) from my local camera shop for around ~150 Euros.
 
-APS-C sensor has a crop factor of 1.5x so its full-frame equivalent would be 105mm (`70 * 1.5`). The lens itself does 1:1 magnification, which means that an object with an area of `5cm x 5cm` reflects on to the sensor as  `5cm x 5cm`; its real size. So, a 35mm (`24cm x 26cm`) film frame would create a reflection of the same size. Since full-frame digital cameras have the exact same size for their sensors, 1:1 magnification creates an ideal scenario where you can fit in the 35mm film into the viewfinder and capture all its details without zooming out. With the same object to sensor distance, if you were to take out the full frame sensor out and put in the smaller APS-C, it would only cover some part of that perfectly reflected 35mm image. 1.5x smaller precisely. That means in order to fit the whole thing into the frame, we have to move the camera further away from the film, losing some detail/density. In theory, this is far from ideal but the camera still produces perfectly usable images at this greater distance. However, in order to fit 120mm film, we need to zoom out even more since medium formats are usually 6cm x 6cm or 6cm x 9cm, sometimes even bigger. I do not have any 120mm negatives lying around at the moment, but I reckon in order to compensate the loss of quality, I will have to not zoom out but opt in for doing some digital stitching instead. Stitching requires some more effort though, so I am not sure how viable or "fun" it is yet.
+The APS-C crop factor is 1.5x, so this lens behaves like a 105mm on a full-frame (`70mm × 1.5`). It also supports true 1:1 magnification, meaning a `5cm × 5cm` subject projects onto the sensor exactly as `5cm × 5cm`.
 
-The auto-focus does not work with D5100 body but film scanning requires manual focus anyway, so it was not a deal breaker.
+For a 35mm (`24cm x 26cm`) film frame would create a reflection of the same size. Since full-frame digital cameras have the exact same size for their sensors, 1:1 magnification creates an ideal scenario where you can project the film frame perfectly onto the sensor and capture all its details without zooming out. But with an APS-C sensor, the smaller size means it only covers part of that projected image (roughly 1.5× cropped). To fit the whole frame, I need to move the camera further away from the negative, which sacrifices some detail/density.
 
-Apart from these few disadvantages, the lens itself is great. It is very sharp in mid apertures (around 5.6 and 8 looks the best to me), edge performance is good, no visible distortions/barreling/aberrations (to my untrained eyes). Again, all other specs, features, and disadvantages can be ignored in this context.
+In practice, the results are still very usable. But with 120 film (medium format), which ranges from `6×4.5cm` to `6×9cm` and beyond, you’d have to move even further back. That costs more detail than I’d like. My plan is to experiment with **digital stitching** instead. I am yet to try this out, and see if it is viable and fun.
 
-# Copy Stand
+Autofocus doesn’t work with the D5100 body, but that’s irrelevant since film scanning requires manual focus anyway.
 
-There are many different DSLR scanner formats people use.
+Overall, the lens is great. It is quite sharp at mid apertures (f/5.6–f/8 looks best to me), good edge performance, and no noticeable distortion or aberrations to my untrained eyes.
+
+---
+
+# The Copy Stand
+
+There are many approaches for holding the camera steady in scanning setups:
 
 - Copy stands
-- Lens attached contraptions (Like Valoi)
+- Lens mounted contraptions (like Valoi)
 - Rail based rigs
-- Tripods with inverted columns, camera facing down
+- Tripods with inverted columns and camera facing down
 
-I decided to go with the first one because it seemed like the most versatile design for improving and adapting different parts. It does not take much space, it is solid and stable. It is very important for the rig to not move around because the film plane and the sensor plane has to be perfectly parallel on all axes. Even the slightest deviation or tilt can result in unfocused parts in the photo, since depth-of-field is so thin. I don't have the exact measurements, but at f5.6 to f8 where the image is sharpest for this lens, the depth of field is probably within one milimeter.
+I went with a copy stand form factor because it seemed the most versatile for upgrading and adapting different parts. It is compact, stable, and solid. Stability is critical. The sensor and film plane must be perfectly parallel on all axes. Even the slightest tilt can throw parts of the frame out of focus because the depth of field at f/5.6–f/8 is razor thin, probably less than a millimeter.
 
+To keep things stable, I built the stand with a plastic butcher block, a 3/4" threaded metal pipe, and a metal flange. The flange is screwed into the base, and the pipe goes into it. A super clamp attaches the camera to the pipe, making it easy to adjust height. Once tightened, the whole setup is very solid.
 
-The camera has to be perfectly stable once leveled. Copy stand itself has to be very solid and heavy to prevent vibrations or any movement with the camera. I chose a plastic butcher block, a 3/4" threaded metal pipe, and a metal flange for it. The flange is screwed on to the board, and the pipe goes into the flange. I attached a super clamp to the pipe, so the whole thing is very easy to move up and down but once tightened, it never moves around.
+---
 
-# Film Plane
+# The Film Plane
 
-This is where all the 3D printing comes in. There are tons of readily available models
-
-
-# Ideas To Explore
+This is where the 3D printing comes in. There are tons of models online for film holders, negative carriers, lightboxes, adapters, etc.
