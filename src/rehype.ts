@@ -1,7 +1,18 @@
 import type { Root, Html, Node } from "mdast";
 
 export default function rehypeSvgThemeTransformer() {
-  return (tree: Root) => visit(tree, predicate, transformer);
+  return (tree: Root) => {
+    visit(
+      tree,
+      (node: any) => node.type === "raw",
+      (node: Html) => {
+        node.value = node.value
+          .replace(/<\?xml[^>]*\?>\s*/gi, "")
+          .replace(/<!DOCTYPE[^>]*>\s*/gi, "");
+      }
+    ); // sanitize unnecessary/breaking tags
+    visit(tree, predicate, transformer);
+  };
 }
 
 function predicate(node: any): boolean {
@@ -12,6 +23,8 @@ function predicate(node: any): boolean {
     !node.value.includes("skip-rehype-all")
   );
 }
+
+function cleanup(tree: Root): void {}
 
 function transformer(node: Html): void {
   const shouldSkipColoring = node.value.includes("skip-rehype-color");
