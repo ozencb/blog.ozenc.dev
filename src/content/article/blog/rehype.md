@@ -120,12 +120,17 @@ function predicate(node: any): boolean {
 }
 
 function transformer(node: Html): void {
+  const shouldSkipColoring = node.value.includes("skip-rehype-color");
   node.value = node.value
     .replace(/\s(width|height)="[^"]*"/g, "") // remove width and height props for responsivity
     .replace(/<svg([^>]*)>/, `<svg$1 role="img" aria-hidden="true"`) // accessibility
-    .replace(/<svg([^>]*)>/, `<svg$1 class="theme-markdown-svg">`); // add a css class for further styling
+    .replace(
+      /<svg([^>]*)>/,
+      `<svg$1 class="theme-markdown-svg ${
+        !shouldSkipColoring ? "" : "colored"
+      }">`; // add a css class for further styling
 
-  if (!node.value.includes("skip-rehype-color")) { // a handy flag in case i want to skip removing color
+  if (!shouldSkipColoring) { // a handy flag in case i want to skip removing color
     node.value = node.value
       .replace(/\sfill="[^"]*"/g, "")
       .replace(/\sstroke="[^"]*"/g, "");
@@ -150,16 +155,19 @@ function visit<T extends Node>(
 
 And, that's it. Transformer function can be extended to add extra functionality. Mine removes `width` and `height`, add a CSS class, and selectively (if the svg does not have a `skip-rehype-color` property) remove `fill` and `stroke` so I can provide my own colors to the shapes. I added the `skip-*` flags in case I want to keep orignal colors and dimensions.
 
-This is what I do with the CSS class:
+This is what I do with the CSS classes:
 
 ```css
 .theme-markdown-svg {
-  fill: currentColor;
-  stroke: currentColor;
   max-height: 50vh;
   width: auto;
   height: auto;
   display: block;
+}
+
+.theme-markdown-svg-colored {
+  stroke: currentColor;
+  fill: currentColor;
 }
 ```
 
