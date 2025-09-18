@@ -7,8 +7,6 @@ draft: true
 
 #### *Part List*
 
-
-
 ---
 
 I put together this simple DSLR film scanning rig to re-digitize (some of the shop scans I have are horrid) my negatives, and scan home-developed films. I went this way because:
@@ -56,7 +54,7 @@ There are many different DSLR scanner formats people use.
 I decided to go with the first one because it seemed like the most versatile design for improving and adapting different parts. It does not take much space, it is solid and stable. It is very important for the rig to not move around because the film plane and the sensor plane has to be perfectly parallel on all axes. Even the slightest deviation or tilt can result in unfocused parts in the photo, since depth-of-field is so thin. I don't have the exact measurements, but at f5.6 to f8 where the image is sharpest for this lens, the depth of field is probably within one milimeter.
 
 
-The camera has to be perfectly solid and stable after leveling
+The camera has to be perfectly stable once leveled. Copy stand itself has to be very solid and heavy to prevent vibrations or any movement with the camera. I chose a plastic butcher block, a 3/4" threaded metal pipe, and a metal flange for it. The flange is screwed on to the board, and the pipe goes into the flange. I attached a super clamp to the pipe, so the whole thing is very easy to move up and down but once tightened, it never moves around.
 
 # Film Plane
 
