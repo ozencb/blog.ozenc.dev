@@ -14,12 +14,22 @@ function predicate(node: any): boolean {
 }
 
 function transformer(node: Html): void {
+  const shouldSkipColoring = node.value.includes("skip-rehype-color");
+  console.log(
+    { shouldSkipColoring },
+    `<svg$1 class="theme-markdown-svg ${!shouldSkipColoring ? "" : "colored"}"`
+  );
   node.value = node.value
     .replace(/\s(width|height)="[^"]*"/g, "")
     .replace(/<svg([^>]*)>/, `<svg$1 role="img" aria-hidden="true"`)
-    .replace(/<svg([^>]*)>/, `<svg$1 class="theme-markdown-svg">`);
+    .replace(
+      /<svg([^>]*)>/,
+      `<svg$1 class="theme-markdown-svg ${
+        !shouldSkipColoring ? "" : "colored"
+      }">`
+    );
 
-  if (!node.value.includes("skip-rehype-color")) {
+  if (!shouldSkipColoring) {
     node.value = node.value
       .replace(/\sfill="[^"]*"/g, "")
       .replace(/\sstroke="[^"]*"/g, "");

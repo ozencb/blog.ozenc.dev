@@ -117,10 +117,13 @@ td {
 }
 
 .theme-markdown-svg {
-  fill: currentColor;
-  stroke: currentColor;
   max-height: 50vh;
   width: auto;
   height: auto;
   display: block;
+}
+
+.theme-markdown-svg:not(.colored) {
+  stroke: currentColor;
+  fill: currentColor;
 }
