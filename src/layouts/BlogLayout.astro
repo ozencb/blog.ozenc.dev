@@ -27,7 +27,13 @@ const { title, description, pubDate, tags, timeToRead } = Astro.props;
 
     <hr />
     <div class="tags">
-      {tags?.map((tag: string) => <FooterTag tag={tag} />)}
+      {
+        tags?.map((tag: string) => (
+          <a class="tag" href={`/tags/${tag}`}>
+            #{tag}
+          </a>
+        ))
+      }
     </div>
   </article>
 </SiteLayout>
