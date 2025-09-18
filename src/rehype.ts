@@ -24,8 +24,6 @@ function predicate(node: any): boolean {
   );
 }
 
-function cleanup(tree: Root): void {}
-
 function transformer(node: Html): void {
   const shouldSkipColoring = node.value.includes("skip-rehype-color");
 

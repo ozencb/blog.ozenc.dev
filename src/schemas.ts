@@ -51,4 +51,5 @@ export const likedPostSchema = z.object({
   description: z.string().optional(),
   url: z.string().url("Invalid URL"),
   pubDate: pubDateProcessor.optional(),
+  draft: draftProcessor.optional(),
 });

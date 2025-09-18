@@ -14,32 +14,36 @@ export async function GET(context) {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     site,
-    items: posts.map((post) => {
-      let html = parser.render(post.body);
+    items: posts
+      .map((post) => {
+        if (!post.body || post.data?.draft) return null;
 
-      // Convert relative image URLs (and any other relative URLs) to absolute
-      html = html.replaceAll(
-        /(<img[^>]+src=["'])([^"']+)/g,
-        (_, prefix, src) => `${prefix}${site}${src}`
-      );
-      html = html.replaceAll(
-        /(<a[^>]+href=["'])(\/[^"']+)/g,
-        (_, prefix, href) => `${prefix}${site}${href}`
-      );
+        let html = parser.render(post.body);
 
-      return {
-        link: "/" + post.slug,
-        title: post.data.title,
-        pubDate: post.data.pubDate,
-        description: post.data.description,
-        content: sanitizeHtml(html, {
-          allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img"]),
-          allowedAttributes: {
-            ...sanitizeHtml.defaults.allowedAttributes,
-            img: ["src", "alt", "title", "width", "height"],
-          },
-        }),
-      };
-    }),
+        // Convert relative image URLs (and any other relative URLs) to absolute
+        html = html.replaceAll(
+          /(<img[^>]+src=["'])([^"']+)/g,
+          (_, prefix, src) => `${prefix}${site}${src}`
+        );
+        html = html.replaceAll(
+          /(<a[^>]+href=["'])(\/[^"']+)/g,
+          (_, prefix, href) => `${prefix}${site}${href}`
+        );
+
+        return {
+          link: "/" + post.slug,
+          title: post.data.title,
+          pubDate: post.data.pubDate,
+          description: post.data.description,
+          content: sanitizeHtml(html, {
+            allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img"]),
+            allowedAttributes: {
+              ...sanitizeHtml.defaults.allowedAttributes,
+              img: ["src", "alt", "title", "width", "height"],
+            },
+          }),
+        };
+      })
+      .filter(Boolean),
   });
 }

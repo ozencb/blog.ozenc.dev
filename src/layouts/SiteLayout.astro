@@ -1,9 +1,9 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 
-import { SITE_TITLE, SITE_DESCRIPTION } from '../constants';
+import { SITE_TITLE, SITE_DESCRIPTION } from "../constants";
 
 const { title, description } = Astro.props;
 ---
@@ -35,35 +35,25 @@ const { title, description } = Astro.props;
     </div>
 
     <script>
-      // This code is only used to remember theme selection
       const themeSwitch = document.querySelector(
-        '.theme-switch'
+        ".theme-switch"
       ) as HTMLInputElement;
       if (themeSwitch) {
-        const switchThemeStorageValue = localStorage.getItem('switchedTheme');
+        const switchThemeStorageValue = localStorage.getItem("switchedTheme");
+        themeSwitch.checked = switchThemeStorageValue
+          ? switchThemeStorageValue === "true"
+          : window.matchMedia("(prefers-color-scheme: light)").matches;
 
-        if (switchThemeStorageValue) {
-          themeSwitch.checked = switchThemeStorageValue === 'true';
-        } else {
-          const isUserPrefersLightTheme = window.matchMedia(
-            '(prefers-color-scheme: light)'
-          );
-
-          themeSwitch.checked = isUserPrefersLightTheme.matches;
-        }
         document.documentElement.setAttribute(
-          'theme',
-          themeSwitch.checked ? 'light' : 'dark'
+          "theme",
+          themeSwitch.checked ? "light" : "dark"
         );
 
-        themeSwitch.addEventListener('change', function (e) {
-          if (e.currentTarget && e.currentTarget['checked'] === true) {
-            // Add item to localstorage
-            localStorage.setItem('switchedTheme', 'true');
-          } else {
-            // Remove item if theme is switched back to normal
-            localStorage.setItem('switchedTheme', 'false');
-          }
+        themeSwitch.addEventListener("change", function (e) {
+          localStorage.setItem(
+            "switchedTheme",
+            (e.currentTarget as HTMLInputElement)?.checked.toString()
+          );
         });
       }
     </script>
