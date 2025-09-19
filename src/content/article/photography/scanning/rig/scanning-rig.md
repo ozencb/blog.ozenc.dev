@@ -10,11 +10,11 @@ draft: true
 - Nikon D5100
 - Sigma 70mm f/2.8 EX DG 
 - Godox LDP8Bi LED Video Light
-- 3D Printed [35mm film holder](https://www.thingiverse.com/thing:4620992)
-- 3D Printed [stand for film holder](https://www.printables.com/model/1357811-godox-ldp8bi-negative-holder)
-- 3D Printed [base stand for backlight](https://www.printables.com/model/1357811-godox-ldp8bi-negative-holder)
-- 3D Printed [focus ring extension](https://www.printables.com/model/1360363-74mm-lens-focus-ring-extension)
-- 3D Printed [lens hood](https://www.printables.com/model/1419290-35mm-hood-for-negative-holder-with-74mm-diameter)
+- [3D Printed 35mm film holder](https://www.thingiverse.com/thing:4620992)
+- [3D Printed stand for film holder](https://www.printables.com/model/1357811-godox-ldp8bi-negative-holder)
+- [3D Printed base stand for backlight](https://www.printables.com/model/1357811-godox-ldp8bi-negative-holder)
+- [3D Printed focus ring extension](https://www.printables.com/model/1360363-74mm-lens-focus-ring-extension)
+- [3D Printed lens hood](https://www.printables.com/model/1419290-35mm-hood-for-negative-holder-with-74mm-diameter)
 
 
 ---
