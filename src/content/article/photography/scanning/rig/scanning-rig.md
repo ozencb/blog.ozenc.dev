@@ -14,7 +14,8 @@ draft: true
 - 3D Printed [stand for film holder](https://www.printables.com/model/1357811-godox-ldp8bi-negative-holder)
 - 3D Printed [base stand for backlight](https://www.printables.com/model/1357811-godox-ldp8bi-negative-holder)
 - 3D Printed [focus ring extension](https://www.printables.com/model/1360363-74mm-lens-focus-ring-extension)
-- 
+- 3D Printed [lens hood](https://www.printables.com/model/1419290-35mm-hood-for-negative-holder-with-74mm-diameter)
+
 
 ---
 
@@ -82,4 +83,6 @@ To keep things stable, I built the stand with a plastic butcher block, a 3/4" th
 
 # The Film Plane
 
-This is where the 3D printing comes in. There are tons of models online for film holders, negative carriers, lightboxes, adapters, etc. 
+This is where the 3D printing comes in. There are tons of models online for film holders, negative carriers, lightboxes, adapters, etc. I tried many, and they all do somehow work but I decided to go with what **samw427** has done with [here](https://www.thingiverse.com/thing:4620992). I did so because it
+
+# Backlight
