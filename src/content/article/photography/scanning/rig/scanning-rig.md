@@ -90,8 +90,12 @@ I decided to use a dedicated backlight instead and found the **Godox LDP8Bi LED 
 
 ## The Film Plane
 
-This is where 3D printing comes in. There are plenty of existing models online for film holders, negative carriers, adapters, and lightboxes. I tried several, and while most worked fine, I ultimately went with what **samw427** shared [here](https://www.thingiverse.com/thing:4620992).  
+This is where 3D printing comes in. There are plenty of existing models online for film holders, negative carriers, adapters, and lightboxes. I tried several, and while most worked fine, I ultimately went with what **samw427** shared [here](https://www.thingiverse.com/thing:4620992).  It is very easy to reel the negative into this film holder, and it keeps the negative flat. 
 
-To adapt it for my setup, I designed a [mounting piece](https://www.printables.com/model/1357811-godox-ldp8bi-negative-holder) for the film holder, placed the backlight on [this base](https://www.printables.com/model/1355994-godox-ldp8bi-flat-base-stand), and added a [hood](https://www.printables.com/model/1419290-35mm-hood-for-negative-holder-with-74mm-diameter) on top to prevent lights leaking in from affecting the scans.  
+To adapt it for my setup, I designed a [mounting piece](https://www.printables.com/model/1357811-godox-ldp8bi-negative-holder) for the film holder, placed the backlight on [this base](https://www.printables.com/model/1355994-godox-ldp8bi-flat-base-stand), and added a [hood](https://www.printables.com/model/1419290-35mm-hood-for-negative-holder-with-74mm-diameter) on top to prevent lights leaking in from affecting the scans. 
 
+---
 
+The whole setup turned out pretty fine and usable. I am still working on fine-tuning the scanning process and color grading, but all in all, it was a very fun project. 
+
+Part 2 for scanning process is coming soon!
