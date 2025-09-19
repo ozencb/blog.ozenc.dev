@@ -7,6 +7,15 @@ draft: true
 
 #### *Part List*
 
+- Nikon D5100
+- Sigma 70mm f/2.8 EX DG 
+- Godox LDP8Bi LED Video Light
+- 3D Printed [35mm film holder](https://www.thingiverse.com/thing:4620992)
+- 3D Printed [stand for film holder](https://www.printables.com/model/1357811-godox-ldp8bi-negative-holder)
+- 3D Printed [base stand for backlight](https://www.printables.com/model/1357811-godox-ldp8bi-negative-holder)
+- 3D Printed [focus ring extension](https://www.printables.com/model/1360363-74mm-lens-focus-ring-extension)
+- 
+
 ---
 
 I put together this simple DSLR film scanning rig to re-digitize my negatives (some of the shop scans I had were horrid) and to scan my home-developed films. I chose this route because:
@@ -73,4 +82,4 @@ To keep things stable, I built the stand with a plastic butcher block, a 3/4" th
 
 # The Film Plane
 
-This is where the 3D printing comes in. There are tons of models online for film holders, negative carriers, lightboxes, adapters, etc.
+This is where the 3D printing comes in. There are tons of models online for film holders, negative carriers, lightboxes, adapters, etc. 
