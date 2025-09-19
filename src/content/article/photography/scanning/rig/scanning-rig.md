@@ -11,8 +11,8 @@ draft: true
 - Sigma 70mm f/2.8 EX DG 
 - Godox LDP8Bi LED Video Light
 - [3D Printed 35mm film holder](https://www.thingiverse.com/thing:4620992)
-- [3D Printed stand for film holder](https://www.printables.com/model/1357811-godox-ldp8bi-negative-holder)
-- [3D Printed base stand for backlight](https://www.printables.com/model/1357811-godox-ldp8bi-negative-holder)
+- [3D Printed mask/stand for film holder](https://www.printables.com/model/1357811-godox-ldp8bi-negative-holder)
+- [3D Printed base stand for backlight](https://www.printables.com/model/1355994-godox-ldp8bi-flat-base-stand)
 - [3D Printed focus ring extension](https://www.printables.com/model/1360363-74mm-lens-focus-ring-extension)
 - [3D Printed lens hood](https://www.printables.com/model/1419290-35mm-hood-for-negative-holder-with-74mm-diameter)
 
@@ -96,4 +96,4 @@ Light source is very important for film scanning. People get good results puttin
 
 # The Film Plane
 
-This is where the 3D printing comes in. There are tons of models online for film holders, negative carriers, lightboxes, adapters, etc. I tried many, and they all do somehow work but I decided to go with what **samw427** has done with [here](https://www.thingiverse.com/thing:4620992). I did so because it
+This is where the 3D printing comes in. There are tons of models online for film holders, negative carriers, lightboxes, adapters, etc. I tried many, and they all do somehow work but I decided to go with what **samw427** has done with [here](https://www.thingiverse.com/thing:4620992). I designed a [piece](https://www.printables.com/model/1357811-godox-ldp8bi-negative-holder) for it to sit on, so it does not move around on the backlight. The backlight sits on [this remixed design](https://www.printables.com/model/1355994-godox-ldp8bi-flat-base-stand),  
