@@ -52,7 +52,7 @@ I picked up a second-hand **Sigma 70mm f/2.8 EX DG** (the older non-“Art” ve
 
 The APS-C crop factor is 1.5x, so this lens behaves like a 105mm on a full-frame (`70mm × 1.5`). It also supports true 1:1 magnification, meaning a `5cm × 5cm` subject projects onto the sensor exactly as `5cm × 5cm`.
 
-For a 35mm (`24cm x 26cm`) film frame would create a reflection of the same size. Since full-frame digital cameras have the exact same size for their sensors, 1:1 magnification creates an ideal scenario where you can project the film frame perfectly onto the sensor and capture all its details without zooming out. But with an APS-C sensor, the smaller size means it only covers part of that projected image (roughly 1.5× cropped). To fit the whole frame, I need to move the camera further away from the negative, which sacrifices some detail/density.
+For a 35mm (`24mm x 36mm`) film frame would create a reflection of the same size. Since full-frame digital cameras have the exact same size for their sensors, 1:1 magnification creates an ideal scenario where you can project the film frame perfectly onto the sensor and capture all its details without zooming out. But with an APS-C sensor, the smaller size means it only covers part of that projected image (roughly 1.5× cropped). To fit the whole frame, I need to move the camera further away from the negative, which sacrifices some detail/density.
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480.01484754248924 344.82553148382067" width="960.0296950849785" height="689.6510629676413">
 <!-- svg-source:excalidraw --><metadata></metadata><defs><style class="style-fonts">
