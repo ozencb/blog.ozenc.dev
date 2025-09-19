@@ -27,6 +27,8 @@ I put together this simple DSLR film scanning rig to re-digitize my negatives (s
 
 That said, this wasn’t a straightforward path. It required research, careful planning, and some DIY work. In this blog post, I’ll walk through how I did the thing that's been done many times by other people.
 
+![rig-1](rig.jpeg "Rig")
+
 ## Requirements
 
 The final setup had to meet a few needs:
@@ -58,6 +60,8 @@ Autofocus doesn’t work with the D5100 body, but that’s irrelevant since film
 
 Overall, the lens is great. It is quite sharp at mid apertures (f/5.6–f/8 looks best to me), good edge performance, and no noticeable distortion or aberrations to my untrained eyes.
 
+![Lens](lens.jpeg "Lens")
+
 ## The Copy Stand
 
 There are many approaches for holding the camera steady in scanning setups:
@@ -88,11 +92,15 @@ I decided to use a dedicated backlight instead and found the **Godox LDP8Bi LED 
 - Bright enough for scanning at lower ISO and faster shutter speeds  
 - USB-C powered
 
+![backlight](backlight.jpeg "Backlight")
+
 ## The Film Plane
 
 This is where 3D printing comes in. There are plenty of existing models online for film holders, negative carriers, adapters, and lightboxes. I tried several, and while most worked fine, I ultimately went with what **samw427** shared [here](https://www.thingiverse.com/thing:4620992).  It is very easy to reel the negative into this film holder, and it keeps the negative flat. 
 
 To adapt it for my setup, I designed a [mounting piece](https://www.printables.com/model/1357811-godox-ldp8bi-negative-holder) for the film holder, placed the backlight on [this base](https://www.printables.com/model/1355994-godox-ldp8bi-flat-base-stand), and added a [hood](https://www.printables.com/model/1419290-35mm-hood-for-negative-holder-with-74mm-diameter) on top to prevent lights leaking in from affecting the scans. 
+
+![](scan.jpeg)
 
 ---
 
