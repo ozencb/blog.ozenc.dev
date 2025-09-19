@@ -90,7 +90,7 @@ Light source is very important for film scanning. People get good results puttin
 - Good color rendering, CRI >96 and TLCI ~98
 - Good diffusion layer
 - Bright enough
-- Powered by USB
+- Powered with USB Type-C
 
 ---
 
