@@ -100,4 +100,4 @@ Light source is very important for film scanning. People get good results puttin
 
 # The Film Plane
 
-This is where the 3D printing comes in. There are tons of models online for film holders, negative carriers, lightboxes, adapters, etc. I tried many, and they all do somehow work but I decided to go with what **samw427** has done with [here](https://www.thingiverse.com/thing:4620992). I designed a [piece](https://www.printables.com/model/1357811-godox-ldp8bi-negative-holder) for it to sit on, so it does not move around on the backlight. The backlight sits on [this remixed design](https://www.printables.com/model/1355994-godox-ldp8bi-flat-base-stand),  
+This is where the 3D printing comes in. There are tons of models online for film holders, negative carriers, lightboxes, adapters, etc. I tried many, and they all work but I decided to go with what **samw427** has done with [here](https://www.thingiverse.com/thing:4620992). I designed a [piece](https://www.printables.com/model/1357811-godox-ldp8bi-negative-holder) for it to sit on, the backlight sits on [this remixed design](https://www.printables.com/model/1355994-godox-ldp8bi-flat-base-stand), and 
