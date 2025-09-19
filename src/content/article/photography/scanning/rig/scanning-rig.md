@@ -87,17 +87,21 @@ To keep things stable, I built the stand with a plastic butcher block, a 3/4" th
 
 # Backlight
 
-Light source is very important for film scanning. People get good results putting the film on their tablets or phones, if the panel is good enough but it still needs a diffusion layer or some distance between the negative and the screen to prevent individual pixels from being seen. I decided to get a dedicated backlight with good specs and found Godox LDP8Bi LED Video Light as the cheapest option where I live.
+Light is one of the most important factors in film scanning. Some people get decent results by placing negatives on a tablet or phone screen, provided the panel is good enough. However, this still requires either a diffusion layer or some distance between the film and the screen to avoid visible pixel patterns.
 
-- Compact but big enough for 35mm and 120mm formats
-- Adjustable temperature (ranges between **2800k** - **6500k**), good for matching film's base color or similar color corrections
-- Good color rendering, CRI >96 and TLCI ~98
-- Good diffusion layer
-- Bright enough
-- Powered with USB Type-C
+I decided to use a dedicated backlight instead and found the **Godox LDP8Bi LED Video Light** to be the most affordable option available where I live. It has several advantages:  
+
+- Compact, yet large enough for both 35mm and 120mm formats  
+- Adjustable color temperature (**2800K–6500K**) for matching a film’s base color or making color corrections  
+- High color accuracy (CRI >96, TLCI ~98)  
+- Built-in diffusion layer  
+- Bright enough for scanning at lower ISO and faster shutter speeds  
+- USB-C powered
 
 ---
 
 # The Film Plane
 
-This is where the 3D printing comes in. There are tons of models online for film holders, negative carriers, lightboxes, adapters, etc. I tried many, and they all work but I decided to go with what **samw427** has done with [here](https://www.thingiverse.com/thing:4620992). I designed a [piece](https://www.printables.com/model/1357811-godox-ldp8bi-negative-holder) for it to sit on, the backlight sits on [this remixed design](https://www.printables.com/model/1355994-godox-ldp8bi-flat-base-stand), and 
+This is where 3D printing comes in. There are plenty of existing models online for film holders, negative carriers, adapters, and lightboxes. I tried several, and while most worked fine, I ultimately went with what **samw427** shared [here](https://www.thingiverse.com/thing:4620992).  
+
+To adapt it for my setup, I designed a [mounting piece](https://www.printables.com/model/1357811-godox-ldp8bi-negative-holder) for the film holder, placed the backlight on [this base](https://www.printables.com/model/1355994-godox-ldp8bi-flat-base-stand), and added a [hood](https://www.printables.com/model/1419290-35mm-hood-for-negative-holder-with-74mm-diameter) on top to prevent lights leaking in from affecting the scans.  
