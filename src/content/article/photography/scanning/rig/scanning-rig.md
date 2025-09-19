@@ -81,8 +81,19 @@ To keep things stable, I built the stand with a plastic butcher block, a 3/4" th
 
 ---
 
+# Backlight
+
+Light source is very important for film scanning. People get good results putting the film on their tablets or phones, if the panel is good enough but it still needs a diffusion layer or some distance between the negative and the screen to prevent individual pixels from being seen. I decided to get a dedicated backlight with good specs and found Godox LDP8Bi LED Video Light as the cheapest option where I live.
+
+- Compact but big enough for 35mm and 120mm formats
+- Adjustable temperature (ranges between **2800k** - **6500k**), good for matching film's base color or similar color corrections
+- Good color rendering, CRI >96 and TLCI ~98
+- Good diffusion layer
+- Bright enough
+- Powered by USB
+
+---
+
 # The Film Plane
 
 This is where the 3D printing comes in. There are tons of models online for film holders, negative carriers, lightboxes, adapters, etc. I tried many, and they all do somehow work but I decided to go with what **samw427** has done with [here](https://www.thingiverse.com/thing:4620992). I did so because it
-
-# Backlight
