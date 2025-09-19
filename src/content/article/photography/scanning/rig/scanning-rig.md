@@ -83,6 +83,8 @@ I went with a copy stand form factor because it seemed the most versatile for up
 
 To keep things stable, I built the stand with a plastic butcher block, a 3/4" threaded metal pipe, and a metal flange. The flange is screwed into the base, and the pipe goes into it. A super clamp attaches the camera to the pipe, making it easy to adjust height. Once tightened, the whole setup is very solid.
 
+![Stand](./assets/stand.jpeg)
+
 ## Backlight
 
 Light is one of the most important factors in film scanning. Some people get decent results by placing negatives on a tablet or phone screen, provided the panel is good enough. However, this still requires either a diffusion layer or some distance between the film and the screen to avoid visible pixel patterns.
@@ -103,6 +105,16 @@ I decided to use a dedicated backlight instead and found the **Godox LDP8Bi LED 
 This is where 3D printing comes in. There are plenty of existing models online for film holders, negative carriers, adapters, and lightboxes. I tried several, and while most worked fine, I ultimately went with what **samw427** shared [here](https://www.thingiverse.com/thing:4620992).  It is very easy to reel the negative into this film holder, and it keeps the negative flat. 
 
 To adapt it for my setup, I designed a [mounting piece](https://www.printables.com/model/1357811-godox-ldp8bi-negative-holder) for the film holder, placed the backlight on [this base](https://www.printables.com/model/1355994-godox-ldp8bi-flat-base-stand), and added a [hood](https://www.printables.com/model/1419290-35mm-hood-for-negative-holder-with-74mm-diameter) on top to prevent lights leaking in from affecting the scans. 
+
+***All different parts laid out:***
+
+![Parts 1](./assets/parts-1.jpeg)
+
+***All parts fitted together, except the lens hood***
+
+![Parts 2](./assets/parts-2.jpeg)
+
+And this is how it looks on the viewfinder. 
 
 ![viewfinder](./assets/scan.jpeg "Viewfinder")
 
