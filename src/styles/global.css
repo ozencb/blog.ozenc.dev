@@ -121,6 +121,7 @@ td {
   width: 100%;
   height: auto;
   display: block;
+  padding-block: 1rem;
 }
 
 .theme-markdown-svg:not(.colored) {
