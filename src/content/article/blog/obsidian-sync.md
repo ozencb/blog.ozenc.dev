@@ -8,7 +8,7 @@ description: ...without Obsidian Blog or Obsidian Sync
 
 I set up this blog a long time ago, hoping it would push me to write more. It has not. But over time, I kept coming up with “blog ideas” and I remember writing being so much fun, so I decided to revisit the project and make publishing a little smoother.
 
-When I first started with this blog, I wanted a statically built, JavaScript-free blog with no backend dependencies. I made that work using Markdown files as the content source and the Astro framework for static generation ([source code here](https://github.com/ozencb/blog.ozenc.dev)). All the content lives alongside the source code, which keeps things simple. Vercel watches the repo for changes and automatically deploys updates.
+When I first started with this blog, I wanted a statically built, JavaScript-free blog with no backend dependencies. I made that work using Markdown files as the content source and the Astro framework for static generation ([source code here](https://github.com/ozencb/blog.ozenc.dev)). All the content lives alongside the source code, which keeps things simple. Cloudflare Pages watches the repo for changes and automatically deploys updates.
 
 This setup works fine. I rarely go a day without access to my PC, and even if I do, writing or editing blog posts is never urgent. Still, I often find myself tinkering with new setups to solve problems that don’t really exist. So, here’s my “improved” version.
 
@@ -27,7 +27,7 @@ Because Obsidian is always available on all my devices and works perfectly with 
 To make this work, I wrote a simple GitHub Action. It watches the `websites/blog.ozenc.dev` folder inside my Obsidian vault repo. When something changes, the workflow pushes updates into the blog repo, which then triggers the usual Astro build and deployment. If this whole thing works fine, I will probably use Obsidian as the primary source of data for my other statically built websites. At that point, I would just add a new folder within `websites` folder and add a new workflow for it to do its thing.
 
 ```
-Obsidian --Sync--> Obsidian Vault Repo --Push--> Blog Repo --Deploy with Vercel--> blog.ozenc.dev
+Obsidian --Sync--> Obsidian Vault Repo --Push--> Blog Repo --Deploy with Cloudflare Pages--> blog.ozenc.dev
 ```
 
 Here’s the workflow in full:
