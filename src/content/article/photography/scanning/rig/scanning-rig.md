@@ -16,7 +16,6 @@ draft: false
 - [3D Printed focus ring extension](https://www.printables.com/model/1360363-74mm-lens-focus-ring-extension)
 - [3D Printed lens hood](https://www.printables.com/model/1419290-35mm-hood-for-negative-holder-with-74mm-diameter)
 
-
 ---
 
 I put together this simple DSLR film scanning rig to re-digitize my negatives (some of the shop scans I had were horrid) and to scan my home-developed films. I chose this route because:
