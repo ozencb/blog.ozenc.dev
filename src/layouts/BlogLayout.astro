@@ -3,6 +3,8 @@ import { format } from "date-fns";
 import { DATE_FORMAT_SHORT, SITE_DESCRIPTION, SITE_TITLE } from "../constants";
 import SiteLayout from "./SiteLayout.astro";
 
+import ComputerIcon from "../assets/icons/computer.svg";
+
 const { title, description, pubDate, tags, timeToRead } = Astro.props;
 ---
 
@@ -24,6 +26,11 @@ const { title, description, pubDate, tags, timeToRead } = Astro.props;
     <slot />
 
     <hr />
+    <img
+      src={ComputerIcon.src}
+      class="logo-computer icon"
+      alt="Computer Icon"
+    />
     <div class="tags">
       {
         tags?.map((tag: string) => (
@@ -61,6 +68,12 @@ const { title, description, pubDate, tags, timeToRead } = Astro.props;
   hr {
     margin: 1.5rem 0;
     color: var(--accent-color);
+  }
+
+  .logo-computer {
+    margin: 0 auto;
+    display: block;
+    filter: var(--filter);
   }
 
   .tags {
